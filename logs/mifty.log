@@ -1,0 +1,997 @@
+[host] 2016-05-18 09:00:10.460 [DEBUG] [main] Initializing ConfigWizard.
+[host] 2016-05-18 09:00:10.465 [DEBUG] [main] loading ServerConfig
+[host] 2016-05-18 09:00:10.509 [DEBUG] [main] FileName set to conf/server.properties
+[host] 2016-05-18 09:00:10.511 [DEBUG] [main] ConfigurationUtils.locate(): base is null, name is conf/server.properties
+[host] 2016-05-18 09:00:10.511 [DEBUG] [main] Could not locate file conf/server.properties at null: no protocol: conf/server.properties
+[host] 2016-05-18 09:00:10.517 [DEBUG] [main] Loading configuration from the path conf/server.properties
+[host] 2016-05-18 09:00:10.517 [DEBUG] [main] Base path set to file:///Users/shc/Desktop/devspace/javaspace/mifty/conf/server.properties
+[host] 2016-05-18 09:00:10.554 [INFO] [main] ServerConfig:
+server.bind_address           = 0.0.0.0
+server.decrypt.key            = miftyExampleKey
+server.port                   = 9090
+server.backlog                = 100
+server.encrypt.type           = DES
+server.sign.key               = miftyExampleKey
+server.sign.type              = MD5
+server.keystore               = /data/keystore
+server.ssl.enabled            = false
+server.ssl.port               = 9091
+server.encrypt.key            = miftyExampleKey
+
+[host] 2016-05-18 09:00:10.554 [DEBUG] [main] Initializing DaoWizard.
+[host] 2016-05-18 09:00:10.593 [INFO] [Thread-0] Starting Mifty server...
+[host] 2016-05-18 09:00:22.848 [DEBUG] [main] p: {"echo":"How are you!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:00:22.891 [DEBUG] [pool-1-thread-1] echo: {"sign":"E00192D3EF9539AD4C3A634064FEC575","params":{"echo":"How are you!","name":"Darren"}}
+[host] 2016-05-18 09:00:22.935 [DEBUG] [pool-1-thread-1] source: {"echo":"How are you!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:00:22.949 [INFO] [pool-1-thread-1] 
+name: Darren
+say: How are you!
+[host] 2016-05-18 09:00:22.950 [DEBUG] [pool-1-thread-1] source: {"sentence":"Hi, Darren ,How are you!"} signKey: miftyExampleKey
+[host] 2016-05-18 09:00:22.951 [DEBUG] [pool-1-thread-1] sayHello: {"sign":"23E7A98AFE424ADA0A8DC2D32AC71230","params":{"sentence":"Hi, Darren ,How are you!"},"errorCode":0,"errorInfo":"Success"}
+[host] 2016-05-18 09:00:22.954 [DEBUG] [main] p: {"hello":"Good morning!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:00:23.199 [DEBUG] [pool-1-thread-1] sayHello: {"encrypted":"ubUVRZ7gfuScyBl/cKNvZ4mU79L5s0fMPlLTwIrhAvbQhV81QuWz42JN6uzyqXrT87UF6DuzniEDzDWBQTj6BSHOJKF7i4SPv6Z6JPhgfHSrmg92+jHQajTACZbx06uq"}
+[host] 2016-05-18 09:00:23.405 [DEBUG] [pool-1-thread-1] source: {"hello":"Good morning!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:00:23.448 [DEBUG] [pool-1-thread-1] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[host] 2016-05-18 09:00:23.459 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[host] 2016-05-18 09:00:23.462 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[host] 2016-05-18 09:00:23.466 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[host] 2016-05-18 09:00:23.592 [INFO] [pool-1-thread-1] HHH000412: Hibernate Core {5.1.0.Final}
+[host] 2016-05-18 09:00:23.595 [INFO] [pool-1-thread-1] HHH000206: hibernate.properties not found
+[host] 2016-05-18 09:00:23.597 [INFO] [pool-1-thread-1] HHH000021: Bytecode provider name : javassist
+[host] 2016-05-18 09:00:23.629 [DEBUG] [pool-1-thread-1] Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD 3.0//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+[host] 2016-05-18 09:00:23.630 [DEBUG] [pool-1-thread-1] Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+[host] 2016-05-18 09:00:23.633 [DEBUG] [pool-1-thread-1] cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+[host] 2016-05-18 09:00:23.866 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[host] 2016-05-18 09:00:23.866 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[host] 2016-05-18 09:00:23.866 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[host] 2016-05-18 09:00:23.890 [DEBUG] [pool-1-thread-1] Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[host] 2016-05-18 09:00:23.891 [DEBUG] [pool-1-thread-1] Building session factory using provided StandardServiceRegistry
+[host] 2016-05-18 09:00:23.912 [DEBUG] [pool-1-thread-1] Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[host] 2016-05-18 09:00:23.923 [INFO] [pool-1-thread-1] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[host] 2016-05-18 09:00:23.953 [DEBUG] [pool-1-thread-1] Adding type registration boolean -> org.hibernate.type.BooleanType@233374b0
+[host] 2016-05-18 09:00:23.953 [DEBUG] [pool-1-thread-1] Adding type registration boolean -> org.hibernate.type.BooleanType@233374b0
+[host] 2016-05-18 09:00:23.954 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@233374b0
+[host] 2016-05-18 09:00:23.957 [DEBUG] [pool-1-thread-1] Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@3f88655e
+[host] 2016-05-18 09:00:23.959 [DEBUG] [pool-1-thread-1] Adding type registration true_false -> org.hibernate.type.TrueFalseType@22d0ce11
+[host] 2016-05-18 09:00:23.960 [DEBUG] [pool-1-thread-1] Adding type registration yes_no -> org.hibernate.type.YesNoType@79243ef3
+[host] 2016-05-18 09:00:23.963 [DEBUG] [pool-1-thread-1] Adding type registration byte -> org.hibernate.type.ByteType@103fa2aa
+[host] 2016-05-18 09:00:23.963 [DEBUG] [pool-1-thread-1] Adding type registration byte -> org.hibernate.type.ByteType@103fa2aa
+[host] 2016-05-18 09:00:23.964 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@103fa2aa
+[host] 2016-05-18 09:00:23.966 [DEBUG] [pool-1-thread-1] Adding type registration character -> org.hibernate.type.CharacterType@5a5e3da
+[host] 2016-05-18 09:00:23.966 [DEBUG] [pool-1-thread-1] Adding type registration char -> org.hibernate.type.CharacterType@5a5e3da
+[host] 2016-05-18 09:00:23.966 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@5a5e3da
+[host] 2016-05-18 09:00:23.969 [DEBUG] [pool-1-thread-1] Adding type registration short -> org.hibernate.type.ShortType@24945dcb
+[host] 2016-05-18 09:00:23.970 [DEBUG] [pool-1-thread-1] Adding type registration short -> org.hibernate.type.ShortType@24945dcb
+[host] 2016-05-18 09:00:23.971 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Short -> org.hibernate.type.ShortType@24945dcb
+[host] 2016-05-18 09:00:23.972 [DEBUG] [pool-1-thread-1] Adding type registration integer -> org.hibernate.type.IntegerType@6dc6dc2b
+[host] 2016-05-18 09:00:23.973 [DEBUG] [pool-1-thread-1] Adding type registration int -> org.hibernate.type.IntegerType@6dc6dc2b
+[host] 2016-05-18 09:00:23.973 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@6dc6dc2b
+[host] 2016-05-18 09:00:23.976 [DEBUG] [pool-1-thread-1] Adding type registration long -> org.hibernate.type.LongType@673f2af1
+[host] 2016-05-18 09:00:23.976 [DEBUG] [pool-1-thread-1] Adding type registration long -> org.hibernate.type.LongType@673f2af1
+[host] 2016-05-18 09:00:23.977 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Long -> org.hibernate.type.LongType@673f2af1
+[host] 2016-05-18 09:00:23.980 [DEBUG] [pool-1-thread-1] Adding type registration float -> org.hibernate.type.FloatType@792a89f4
+[host] 2016-05-18 09:00:23.980 [DEBUG] [pool-1-thread-1] Adding type registration float -> org.hibernate.type.FloatType@792a89f4
+[host] 2016-05-18 09:00:23.980 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Float -> org.hibernate.type.FloatType@792a89f4
+[host] 2016-05-18 09:00:23.983 [DEBUG] [pool-1-thread-1] Adding type registration double -> org.hibernate.type.DoubleType@560869c8
+[host] 2016-05-18 09:00:23.984 [DEBUG] [pool-1-thread-1] Adding type registration double -> org.hibernate.type.DoubleType@560869c8
+[host] 2016-05-18 09:00:23.984 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@560869c8
+[host] 2016-05-18 09:00:23.987 [DEBUG] [pool-1-thread-1] Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@1d6ddc2f
+[host] 2016-05-18 09:00:23.987 [DEBUG] [pool-1-thread-1] Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@1d6ddc2f
+[host] 2016-05-18 09:00:23.989 [DEBUG] [pool-1-thread-1] Adding type registration big_integer -> org.hibernate.type.BigIntegerType@17b18d5e
+[host] 2016-05-18 09:00:23.989 [DEBUG] [pool-1-thread-1] Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@17b18d5e
+[host] 2016-05-18 09:00:23.990 [DEBUG] [pool-1-thread-1] Adding type registration string -> org.hibernate.type.StringType@4eaa9f42
+[host] 2016-05-18 09:00:23.991 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.String -> org.hibernate.type.StringType@4eaa9f42
+[host] 2016-05-18 09:00:23.992 [DEBUG] [pool-1-thread-1] Adding type registration nstring -> org.hibernate.type.StringNVarcharType@74da3b58
+[host] 2016-05-18 09:00:23.994 [DEBUG] [pool-1-thread-1] Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@6829d82d
+[host] 2016-05-18 09:00:23.995 [DEBUG] [pool-1-thread-1] Adding type registration url -> org.hibernate.type.UrlType@57c40f51
+[host] 2016-05-18 09:00:23.996 [DEBUG] [pool-1-thread-1] Adding type registration java.net.URL -> org.hibernate.type.UrlType@57c40f51
+[host] 2016-05-18 09:00:23.998 [DEBUG] [pool-1-thread-1] Adding type registration date -> org.hibernate.type.DateType@46bf27
+[host] 2016-05-18 09:00:23.999 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Date -> org.hibernate.type.DateType@46bf27
+[host] 2016-05-18 09:00:24.001 [DEBUG] [pool-1-thread-1] Adding type registration time -> org.hibernate.type.TimeType@35f9263
+[host] 2016-05-18 09:00:24.001 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Time -> org.hibernate.type.TimeType@35f9263
+[host] 2016-05-18 09:00:24.003 [DEBUG] [pool-1-thread-1] Adding type registration timestamp -> org.hibernate.type.TimestampType@46d961db
+[host] 2016-05-18 09:00:24.004 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@46d961db
+[host] 2016-05-18 09:00:24.004 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Date -> org.hibernate.type.TimestampType@46d961db
+[host] 2016-05-18 09:00:24.006 [DEBUG] [pool-1-thread-1] Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1fcebee
+[host] 2016-05-18 09:00:24.007 [DEBUG] [pool-1-thread-1] Adding type registration calendar -> org.hibernate.type.CalendarType@507a2840
+[host] 2016-05-18 09:00:24.007 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@507a2840
+[host] 2016-05-18 09:00:24.008 [DEBUG] [pool-1-thread-1] Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@507a2840
+[host] 2016-05-18 09:00:24.008 [DEBUG] [pool-1-thread-1] Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@816c920
+[host] 2016-05-18 09:00:24.010 [DEBUG] [pool-1-thread-1] Adding type registration locale -> org.hibernate.type.LocaleType@35b33302
+[host] 2016-05-18 09:00:24.010 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@35b33302
+[host] 2016-05-18 09:00:24.011 [DEBUG] [pool-1-thread-1] Adding type registration currency -> org.hibernate.type.CurrencyType@414f73cd
+[host] 2016-05-18 09:00:24.011 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@414f73cd
+[host] 2016-05-18 09:00:24.013 [DEBUG] [pool-1-thread-1] Adding type registration timezone -> org.hibernate.type.TimeZoneType@7a593bab
+[host] 2016-05-18 09:00:24.013 [DEBUG] [pool-1-thread-1] Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@7a593bab
+[host] 2016-05-18 09:00:24.014 [DEBUG] [pool-1-thread-1] Adding type registration class -> org.hibernate.type.ClassType@644f2668
+[host] 2016-05-18 09:00:24.015 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Class -> org.hibernate.type.ClassType@644f2668
+[host] 2016-05-18 09:00:24.016 [DEBUG] [pool-1-thread-1] Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@4b8bc03c
+[host] 2016-05-18 09:00:24.016 [DEBUG] [pool-1-thread-1] Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@4b8bc03c
+[host] 2016-05-18 09:00:24.017 [DEBUG] [pool-1-thread-1] Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@6f454f66
+[host] 2016-05-18 09:00:24.018 [DEBUG] [pool-1-thread-1] Adding type registration binary -> org.hibernate.type.BinaryType@74b43ba1
+[host] 2016-05-18 09:00:24.019 [DEBUG] [pool-1-thread-1] Adding type registration byte[] -> org.hibernate.type.BinaryType@74b43ba1
+[host] 2016-05-18 09:00:24.019 [DEBUG] [pool-1-thread-1] Adding type registration [B -> org.hibernate.type.BinaryType@74b43ba1
+[host] 2016-05-18 09:00:24.020 [DEBUG] [pool-1-thread-1] Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@70938cc
+[host] 2016-05-18 09:00:24.021 [DEBUG] [pool-1-thread-1] Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@70938cc
+[host] 2016-05-18 09:00:24.021 [DEBUG] [pool-1-thread-1] Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@70938cc
+[host] 2016-05-18 09:00:24.022 [DEBUG] [pool-1-thread-1] Adding type registration image -> org.hibernate.type.ImageType@7fecdc36
+[host] 2016-05-18 09:00:24.023 [DEBUG] [pool-1-thread-1] Adding type registration characters -> org.hibernate.type.CharArrayType@101b2f74
+[host] 2016-05-18 09:00:24.024 [DEBUG] [pool-1-thread-1] Adding type registration char[] -> org.hibernate.type.CharArrayType@101b2f74
+[host] 2016-05-18 09:00:24.024 [DEBUG] [pool-1-thread-1] Adding type registration [C -> org.hibernate.type.CharArrayType@101b2f74
+[host] 2016-05-18 09:00:24.025 [DEBUG] [pool-1-thread-1] Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@7b09df06
+[host] 2016-05-18 09:00:24.026 [DEBUG] [pool-1-thread-1] Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@7b09df06
+[host] 2016-05-18 09:00:24.026 [DEBUG] [pool-1-thread-1] Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@7b09df06
+[host] 2016-05-18 09:00:24.027 [DEBUG] [pool-1-thread-1] Adding type registration text -> org.hibernate.type.TextType@464d02ee
+[host] 2016-05-18 09:00:24.028 [DEBUG] [pool-1-thread-1] Adding type registration ntext -> org.hibernate.type.NTextType@1d634758
+[host] 2016-05-18 09:00:24.032 [DEBUG] [pool-1-thread-1] Adding type registration blob -> org.hibernate.type.BlobType@62723da4
+[host] 2016-05-18 09:00:24.032 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@62723da4
+[host] 2016-05-18 09:00:24.033 [DEBUG] [pool-1-thread-1] Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@38ea76e6
+[host] 2016-05-18 09:00:24.037 [DEBUG] [pool-1-thread-1] Adding type registration clob -> org.hibernate.type.ClobType@37227f8a
+[host] 2016-05-18 09:00:24.038 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@37227f8a
+[host] 2016-05-18 09:00:24.042 [DEBUG] [pool-1-thread-1] Adding type registration nclob -> org.hibernate.type.NClobType@49761f9d
+[host] 2016-05-18 09:00:24.042 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@49761f9d
+[host] 2016-05-18 09:00:24.042 [DEBUG] [pool-1-thread-1] Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@26c5920f
+[host] 2016-05-18 09:00:24.043 [DEBUG] [pool-1-thread-1] Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@7143e96d
+[host] 2016-05-18 09:00:24.045 [DEBUG] [pool-1-thread-1] Adding type registration serializable -> org.hibernate.type.SerializableType@73da4496
+[host] 2016-05-18 09:00:24.048 [DEBUG] [pool-1-thread-1] Adding type registration object -> org.hibernate.type.ObjectType@2a0ec972
+[host] 2016-05-18 09:00:24.049 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@2a0ec972
+[host] 2016-05-18 09:00:24.050 [DEBUG] [pool-1-thread-1] Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@13f002ee
+[host] 2016-05-18 09:00:24.050 [DEBUG] [pool-1-thread-1] Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@7250617b
+[host] 2016-05-18 09:00:24.050 [DEBUG] [pool-1-thread-1] Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@7b300cde
+[host] 2016-05-18 09:00:24.050 [DEBUG] [pool-1-thread-1] Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@f9d0201
+[host] 2016-05-18 09:00:24.051 [DEBUG] [pool-1-thread-1] Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@cee97a9
+[host] 2016-05-18 09:00:24.051 [DEBUG] [pool-1-thread-1] Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@426dee1
+[host] 2016-05-18 09:00:24.051 [DEBUG] [pool-1-thread-1] Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@13f287e8
+[host] 2016-05-18 09:00:24.051 [DEBUG] [pool-1-thread-1] Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@17b89a93
+[host] 2016-05-18 09:00:24.064 [WARN] [pool-1-thread-1] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[host] 2016-05-18 09:00:24.070 [INFO] [pool-1-thread-1] HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+[host] 2016-05-18 09:00:24.071 [INFO] [pool-1-thread-1] HHH10001001: Connection properties: {useUnicode=true, user=root, password=123456, characterEncoding=utf8, useSSL=false}
+[host] 2016-05-18 09:00:24.071 [INFO] [pool-1-thread-1] HHH10001003: Autocommit mode: false
+[host] 2016-05-18 09:00:24.074 [DEBUG] [pool-1-thread-1] Initializing Connection pool with 1 Connections
+[host] 2016-05-18 09:00:24.074 [INFO] [pool-1-thread-1] HHH000115: Hibernate connection pool size: 2 (min=1)
+[host] 2016-05-18 09:00:24.366 [DEBUG] [pool-1-thread-1] Database ->
+       name : MySQL
+    version : 5.7.11
+      major : 5
+      minor : 7
+[host] 2016-05-18 09:00:24.366 [DEBUG] [pool-1-thread-1] Driver ->
+       name : MySQL Connector Java
+    version : mysql-connector-java-5.1.38 ( Revision: fe541c166cec739c74cc727c5da96c1028b4834a )
+      major : 5
+      minor : 1
+[host] 2016-05-18 09:00:24.367 [DEBUG] [pool-1-thread-1] JDBC version : 4.0
+[host] 2016-05-18 09:00:24.396 [INFO] [pool-1-thread-1] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[host] 2016-05-18 09:00:24.448 [DEBUG] [pool-1-thread-1] JDBC driver metadata reported database stores quoted identifiers in more than one case
+[host] 2016-05-18 09:00:24.459 [DEBUG] [pool-1-thread-1] IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+[host] 2016-05-18 09:00:24.536 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[host] 2016-05-18 09:00:24.537 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[host] 2016-05-18 09:00:24.538 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[host] 2016-05-18 09:00:24.539 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[host] 2016-05-18 09:00:24.540 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[host] 2016-05-18 09:00:24.542 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[host] 2016-05-18 09:00:24.543 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[host] 2016-05-18 09:00:24.545 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[host] 2016-05-18 09:00:24.546 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[host] 2016-05-18 09:00:24.547 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[host] 2016-05-18 09:00:24.548 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[host] 2016-05-18 09:00:24.549 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[host] 2016-05-18 09:00:24.550 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[host] 2016-05-18 09:00:24.551 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[host] 2016-05-18 09:00:24.600 [DEBUG] [pool-1-thread-1] Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[host] 2016-05-18 09:00:24.642 [DEBUG] [pool-1-thread-1] Building session factory
+[host] 2016-05-18 09:00:24.644 [DEBUG] [pool-1-thread-1] SessionFactory name : null
+[host] 2016-05-18 09:00:24.645 [DEBUG] [pool-1-thread-1] Automatic flush during beforeCompletion(): disabled
+[host] 2016-05-18 09:00:24.645 [DEBUG] [pool-1-thread-1] Automatic session close at end of transaction: disabled
+[host] 2016-05-18 09:00:24.645 [DEBUG] [pool-1-thread-1] Statistics: disabled
+[host] 2016-05-18 09:00:24.646 [DEBUG] [pool-1-thread-1] Deleted entity synthetic identifier rollback: disabled
+[host] 2016-05-18 09:00:24.646 [DEBUG] [pool-1-thread-1] Default entity-mode: pojo
+[host] 2016-05-18 09:00:24.646 [DEBUG] [pool-1-thread-1] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[host] 2016-05-18 09:00:24.646 [DEBUG] [pool-1-thread-1] Allow initialization of lazy state outside session : disabled
+[host] 2016-05-18 09:00:24.647 [DEBUG] [pool-1-thread-1] Using BatchFetchStyle : LEGACY
+[host] 2016-05-18 09:00:24.647 [DEBUG] [pool-1-thread-1] Default batch fetch size: -1
+[host] 2016-05-18 09:00:24.647 [DEBUG] [pool-1-thread-1] Maximum outer join fetch depth: 2
+[host] 2016-05-18 09:00:24.647 [DEBUG] [pool-1-thread-1] Default null ordering: NONE
+[host] 2016-05-18 09:00:24.647 [DEBUG] [pool-1-thread-1] Order SQL updates by primary key: disabled
+[host] 2016-05-18 09:00:24.648 [DEBUG] [pool-1-thread-1] Order SQL inserts for batching: disabled
+[host] 2016-05-18 09:00:24.648 [DEBUG] [pool-1-thread-1] multi-tenancy strategy : NONE
+[host] 2016-05-18 09:00:24.648 [DEBUG] [pool-1-thread-1] JTA Track by Thread: enabled
+[host] 2016-05-18 09:00:24.648 [DEBUG] [pool-1-thread-1] Query language substitutions: {}
+[host] 2016-05-18 09:00:24.648 [DEBUG] [pool-1-thread-1] JPA query language strict compliance: disabled
+[host] 2016-05-18 09:00:24.649 [DEBUG] [pool-1-thread-1] Named query checking : enabled
+[host] 2016-05-18 09:00:24.649 [DEBUG] [pool-1-thread-1] Second-level cache: enabled
+[host] 2016-05-18 09:00:24.649 [DEBUG] [pool-1-thread-1] Second-level query cache: disabled
+[host] 2016-05-18 09:00:24.649 [DEBUG] [pool-1-thread-1] Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@298dfd5
+[host] 2016-05-18 09:00:24.650 [DEBUG] [pool-1-thread-1] Second-level cache region prefix: null
+[host] 2016-05-18 09:00:24.650 [DEBUG] [pool-1-thread-1] Optimize second-level cache for minimal puts: disabled
+[host] 2016-05-18 09:00:24.650 [DEBUG] [pool-1-thread-1] Structured second-level cache entries: disabled
+[host] 2016-05-18 09:00:24.651 [DEBUG] [pool-1-thread-1] Second-level cache direct-reference entries: disabled
+[host] 2016-05-18 09:00:24.651 [DEBUG] [pool-1-thread-1] Automatic eviction of collection cache: disabled
+[host] 2016-05-18 09:00:24.651 [DEBUG] [pool-1-thread-1] JDBC batch size: 15
+[host] 2016-05-18 09:00:24.651 [DEBUG] [pool-1-thread-1] JDBC batch updates for versioned data: enabled
+[host] 2016-05-18 09:00:24.652 [DEBUG] [pool-1-thread-1] Scrollable result sets: enabled
+[host] 2016-05-18 09:00:24.652 [DEBUG] [pool-1-thread-1] Wrap result sets: disabled
+[host] 2016-05-18 09:00:24.652 [DEBUG] [pool-1-thread-1] JDBC3 getGeneratedKeys(): enabled
+[host] 2016-05-18 09:00:24.652 [DEBUG] [pool-1-thread-1] JDBC result set fetch size: null
+[host] 2016-05-18 09:00:24.652 [DEBUG] [pool-1-thread-1] Connection release mode: ON_CLOSE
+[host] 2016-05-18 09:00:24.653 [DEBUG] [pool-1-thread-1] Generate SQL with comments: disabled
+[host] 2016-05-18 09:00:24.704 [DEBUG] [pool-1-thread-1] Session factory constructed with filter configurations : {}
+[host] 2016-05-18 09:00:24.704 [DEBUG] [pool-1-thread-1] Instantiating session factory with properties: {java.vendor=Oracle Corporation, show_sql=true, sun.java.launcher=SUN_STANDARD, hibernate.connection.url=jdbc:mysql://localhost:3306/test, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, hibernate.connection.characterEncoding=utf8, os.name=Mac OS X, hbm2ddl.auto=update, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/classes, hibernate.current_session_context_class=thread, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.7.0_80-b15, hibernate.cache.provider_class=org.hibernate.cache.internal.NoCacheProvider, user.name=shc, connection.driver_class=com.mysql.jdbc.Driver, hibernate.connection.useSSL=false, current_session_context_class=thread, user.language=zh, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib, dialect=org.hibernate.dialect.MySQLDialect, java.version=1.7.0_80, user.timezone=Asia/Shanghai, sun.arch.data.model=64, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, java.specification.name=Java Platform API Specification, file.separator=/, java.class.version=51.0, user.country=CN, connection.url=jdbc:mysql://localhost:3306/test, java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre, java.vm.info=mixed mode, os.version=10.11.4, connection.useSSL=false, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@4f43a3e7, connection.useUnicode=true, path.separator=:, connection.password=123456, java.vm.version=24.80-b11, hibernate.connection.password=123456, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, sun.io.unicode.encoding=UnicodeBig, awt.toolkit=sun.lwawt.macosx.LWCToolkit, hibernate.connection.username=root, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, user.home=/Users/shc, java.specification.vendor=Oracle Corporation, hibernate.hbm2ddl.auto=update, java.library.path=/Users/shc/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor.url=http://java.oracle.com/, hibernate.connection.driver_class=com.mysql.jdbc.Driver, connection.username=root, java.vm.vendor=Oracle Corporation, gopherProxySet=false, hibernate.dialect=org.hibernate.dialect.MySQLDialect, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=com.shc.mifty.startup.Bootstrap, java.class.path=/Users/shc/Desktop/devspace/javaspace/mifty/target/classes:/Users/shc/Desktop/devspace/maven_repository/org/apache/thrift/libthrift/0.9.3/libthrift-0.9.3.jar:/Users/shc/Desktop/devspace/maven_repository/org/apache/httpcomponents/httpclient/4.4.1/httpclient-4.4.1.jar:/Users/shc/Desktop/devspace/maven_repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/shc/Desktop/devspace/maven_repository/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar:/Users/shc/Desktop/devspace/maven_repository/com/google/code/gson/gson/2.6.2/gson-2.6.2.jar:/Users/shc/Desktop/devspace/maven_repository/org/hibernate/hibernate-core/5.1.0.Final/hibernate-core-5.1.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/Users/shc/Desktop/devspace/maven_repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/shc/Desktop/devspace/maven_repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar:/Users/shc/Desktop/devspace/maven_repository/org/jboss/jandex/2.0.0.Final/jandex-2.0.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/com/fasterxml/classmate/1.3.0/classmate-1.3.0.jar:/Users/shc/Desktop/devspace/maven_repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/Users/shc/Desktop/devspace/maven_repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/Users/shc/Desktop/devspace/maven_repository/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final/hibernate-commons-annotations-5.0.1.Final.jar:/Users/shc/Desktop/devspace/maven_repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar:/Users/shc/Desktop/devspace/maven_repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/shc/Desktop/devspace/maven_repository/org/slf4j/slf4j-log4j12/1.7.21/slf4j-log4j12-1.7.21.jar:/Users/shc/Desktop/devspace/maven_repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/shc/Desktop/devspace/javaspace/crossing/target/classes:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/mina-core-2.0.2.jar:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/sharp-container-1.0.jar:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/log4j-repackaged.jar:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/sharp-container-example-1.0.jar:/Users/shc/Desktop/devspace/maven_repository/com/google/protobuf/protobuf-java/2.6.1/protobuf-java-2.6.1.jar:/Users/shc/Desktop/devspace/maven_repository/io/netty/netty-all/4.0.36.Final/netty-all-4.0.36.Final.jar:/Users/shc/Desktop/devspace/maven_repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/Users/shc/Desktop/devspace/maven_repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/shc/Desktop/devspace/maven_repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/shc/Desktop/devspace/maven_repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar, hibernate.bytecode.use_reflection_optimizer=false, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.7, sun.cpu.endian=little, sun.os.patch.level=unknown, connection.pool_size=2, java.io.tmpdir=/var/folders/p6/yc3hvzns3x7csz6jk52w10380000gn/T/, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, os.arch=x86_64, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, java.ext.dirs=/Users/shc/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, hibernate.connection.useUnicode=true, user.dir=/Users/shc/Desktop/devspace/javaspace/mifty, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, cache.provider_class=org.hibernate.cache.internal.NoCacheProvider, file.encoding=UTF-8, connection.characterEncoding=utf8, java.specification.version=1.7, hibernate.show_sql=true, hibernate.connection.pool_size=2}
+[host] 2016-05-18 09:00:24.726 [DEBUG] [pool-1-thread-1] Skipping JACC integration as it was not enabled
+[host] 2016-05-18 09:00:24.734 [DEBUG] [pool-1-thread-1] Instantiated session factory
+[host] 2016-05-18 09:00:24.764 [DEBUG] [pool-1-thread-1] Checking 0 named HQL queries
+[host] 2016-05-18 09:00:24.764 [DEBUG] [pool-1-thread-1] Checking 0 named SQL queries
+[host] 2016-05-18 09:00:24.767 [DEBUG] [pool-1-thread-1] Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@255bf3b2
+[host] 2016-05-18 09:00:24.769 [DEBUG] [pool-1-thread-1] Registering SessionFactory: b72b89dc-f2aa-4e06-b084-147f33f307c7 (<unnamed>)
+[host] 2016-05-18 09:00:24.769 [DEBUG] [pool-1-thread-1] Not binding SessionFactory to JNDI, no JNDI name configured
+[host] 2016-05-18 09:00:24.835 [DEBUG] [pool-1-thread-1] Statistics initialized [enabled=false]
+[host] 2016-05-18 09:00:24.840 [DEBUG] [pool-1-thread-1] begin
+[host] 2016-05-18 09:00:24.853 [DEBUG] [pool-1-thread-1] QueryTranslatorFactory : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@701fa10f
+[host] 2016-05-18 09:00:24.853 [INFO] [pool-1-thread-1] HHH000397: Using ASTQueryTranslatorFactory
+[host] 2016-05-18 09:00:24.891 [DEBUG] [pool-1-thread-1] parse() - HQL: delete from test.user;
+[host] 2016-05-18 09:00:24.896 [ERROR] [pool-1-thread-1] Error occurred during processing of message.
+org.hibernate.QueryException: unexpected char: ';' [delete from test.user;]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:234)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:142)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:115)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:76)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:150)
+	at org.hibernate.internal.AbstractSessionImpl.getHQLQueryPlan(AbstractSessionImpl.java:302)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:240)
+	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1907)
+	at com.shc.mifty.example.ExaServiceImpl.sayHello(ExaServiceImpl.java:67)
+	at com.shc.mifty.example.ExaService$Processor$sayHello.getResult(ExaService.java:245)
+	at com.shc.mifty.example.ExaService$Processor$sayHello.getResult(ExaService.java:1)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.thrift.TMultiplexedProcessor.process(TMultiplexedProcessor.java:123)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[host] 2016-05-18 09:37:42.715 [DEBUG] [main] Initializing ConfigWizard.
+[host] 2016-05-18 09:37:42.722 [DEBUG] [main] loading ServerConfig
+[host] 2016-05-18 09:37:42.784 [DEBUG] [main] FileName set to conf/server.properties
+[host] 2016-05-18 09:37:42.787 [DEBUG] [main] ConfigurationUtils.locate(): base is null, name is conf/server.properties
+[host] 2016-05-18 09:37:42.787 [DEBUG] [main] Could not locate file conf/server.properties at null: no protocol: conf/server.properties
+[host] 2016-05-18 09:37:42.795 [DEBUG] [main] Loading configuration from the path conf/server.properties
+[host] 2016-05-18 09:37:42.796 [DEBUG] [main] Base path set to file:///Users/shc/Desktop/devspace/javaspace/mifty/conf/server.properties
+[host] 2016-05-18 09:37:42.859 [INFO] [main] ServerConfig:
+server.bind_address           = 0.0.0.0
+server.decrypt.key            = miftyExampleKey
+server.port                   = 9090
+server.backlog                = 100
+server.encrypt.type           = DES
+server.sign.key               = miftyExampleKey
+server.sign.type              = MD5
+server.keystore               = /data/keystore
+server.ssl.enabled            = false
+server.ssl.port               = 9091
+server.encrypt.key            = miftyExampleKey
+
+[host] 2016-05-18 09:37:42.859 [DEBUG] [main] Initializing DaoWizard.
+[host] 2016-05-18 09:37:42.940 [INFO] [Thread-0] Starting Mifty server...
+[host] 2016-05-18 09:37:47.784 [DEBUG] [main] p: {"echo":"How are you!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:37:47.853 [DEBUG] [pool-1-thread-1] echo: {"sign":"E00192D3EF9539AD4C3A634064FEC575","params":{"echo":"How are you!","name":"Darren"}}
+[host] 2016-05-18 09:37:47.901 [DEBUG] [pool-1-thread-1] source: {"echo":"How are you!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:37:47.915 [INFO] [pool-1-thread-1] 
+name: Darren
+say: How are you!
+[host] 2016-05-18 09:37:47.915 [DEBUG] [pool-1-thread-1] source: {"sentence":"Hi, Darren ,How are you!"} signKey: miftyExampleKey
+[host] 2016-05-18 09:37:47.918 [DEBUG] [pool-1-thread-1] sayHello: {"sign":"23E7A98AFE424ADA0A8DC2D32AC71230","params":{"sentence":"Hi, Darren ,How are you!"},"errorCode":0,"errorInfo":"Success"}
+[host] 2016-05-18 09:37:47.921 [DEBUG] [main] p: {"hello":"Good morning!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:37:48.255 [DEBUG] [pool-1-thread-1] sayHello: {"encrypted":"ubUVRZ7gfuScyBl/cKNvZ4mU79L5s0fMPlLTwIrhAvbQhV81QuWz42JN6uzyqXrT87UF6DuzniEDzDWBQTj6BSHOJKF7i4SPv6Z6JPhgfHSrmg92+jHQajTACZbx06uq"}
+[host] 2016-05-18 09:37:48.494 [DEBUG] [pool-1-thread-1] source: {"hello":"Good morning!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:37:48.580 [DEBUG] [pool-1-thread-1] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[host] 2016-05-18 09:37:48.599 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[host] 2016-05-18 09:37:48.604 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[host] 2016-05-18 09:37:48.612 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[host] 2016-05-18 09:37:48.809 [INFO] [pool-1-thread-1] HHH000412: Hibernate Core {5.1.0.Final}
+[host] 2016-05-18 09:37:48.811 [INFO] [pool-1-thread-1] HHH000206: hibernate.properties not found
+[host] 2016-05-18 09:37:48.813 [INFO] [pool-1-thread-1] HHH000021: Bytecode provider name : javassist
+[host] 2016-05-18 09:37:48.901 [DEBUG] [pool-1-thread-1] Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD 3.0//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+[host] 2016-05-18 09:37:48.901 [DEBUG] [pool-1-thread-1] Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+[host] 2016-05-18 09:37:48.909 [DEBUG] [pool-1-thread-1] cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+[host] 2016-05-18 09:37:49.366 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[host] 2016-05-18 09:37:49.366 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[host] 2016-05-18 09:37:49.367 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[host] 2016-05-18 09:37:49.393 [DEBUG] [pool-1-thread-1] Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[host] 2016-05-18 09:37:49.394 [DEBUG] [pool-1-thread-1] Building session factory using provided StandardServiceRegistry
+[host] 2016-05-18 09:37:49.433 [DEBUG] [pool-1-thread-1] Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[host] 2016-05-18 09:37:49.456 [INFO] [pool-1-thread-1] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[host] 2016-05-18 09:37:49.513 [DEBUG] [pool-1-thread-1] Adding type registration boolean -> org.hibernate.type.BooleanType@5b4e1b74
+[host] 2016-05-18 09:37:49.514 [DEBUG] [pool-1-thread-1] Adding type registration boolean -> org.hibernate.type.BooleanType@5b4e1b74
+[host] 2016-05-18 09:37:49.514 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@5b4e1b74
+[host] 2016-05-18 09:37:49.519 [DEBUG] [pool-1-thread-1] Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@39a83e27
+[host] 2016-05-18 09:37:49.521 [DEBUG] [pool-1-thread-1] Adding type registration true_false -> org.hibernate.type.TrueFalseType@3ac9a820
+[host] 2016-05-18 09:37:49.523 [DEBUG] [pool-1-thread-1] Adding type registration yes_no -> org.hibernate.type.YesNoType@4f08370b
+[host] 2016-05-18 09:37:49.526 [DEBUG] [pool-1-thread-1] Adding type registration byte -> org.hibernate.type.ByteType@28d7e661
+[host] 2016-05-18 09:37:49.527 [DEBUG] [pool-1-thread-1] Adding type registration byte -> org.hibernate.type.ByteType@28d7e661
+[host] 2016-05-18 09:37:49.527 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@28d7e661
+[host] 2016-05-18 09:37:49.529 [DEBUG] [pool-1-thread-1] Adding type registration character -> org.hibernate.type.CharacterType@4c122623
+[host] 2016-05-18 09:37:49.529 [DEBUG] [pool-1-thread-1] Adding type registration char -> org.hibernate.type.CharacterType@4c122623
+[host] 2016-05-18 09:37:49.529 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@4c122623
+[host] 2016-05-18 09:37:49.532 [DEBUG] [pool-1-thread-1] Adding type registration short -> org.hibernate.type.ShortType@7adb5354
+[host] 2016-05-18 09:37:49.532 [DEBUG] [pool-1-thread-1] Adding type registration short -> org.hibernate.type.ShortType@7adb5354
+[host] 2016-05-18 09:37:49.533 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7adb5354
+[host] 2016-05-18 09:37:49.535 [DEBUG] [pool-1-thread-1] Adding type registration integer -> org.hibernate.type.IntegerType@605afad3
+[host] 2016-05-18 09:37:49.535 [DEBUG] [pool-1-thread-1] Adding type registration int -> org.hibernate.type.IntegerType@605afad3
+[host] 2016-05-18 09:37:49.535 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@605afad3
+[host] 2016-05-18 09:37:49.539 [DEBUG] [pool-1-thread-1] Adding type registration long -> org.hibernate.type.LongType@3ca6a831
+[host] 2016-05-18 09:37:49.539 [DEBUG] [pool-1-thread-1] Adding type registration long -> org.hibernate.type.LongType@3ca6a831
+[host] 2016-05-18 09:37:49.540 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Long -> org.hibernate.type.LongType@3ca6a831
+[host] 2016-05-18 09:37:49.544 [DEBUG] [pool-1-thread-1] Adding type registration float -> org.hibernate.type.FloatType@d62d2df
+[host] 2016-05-18 09:37:49.544 [DEBUG] [pool-1-thread-1] Adding type registration float -> org.hibernate.type.FloatType@d62d2df
+[host] 2016-05-18 09:37:49.544 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Float -> org.hibernate.type.FloatType@d62d2df
+[host] 2016-05-18 09:37:49.547 [DEBUG] [pool-1-thread-1] Adding type registration double -> org.hibernate.type.DoubleType@2b0d0ce5
+[host] 2016-05-18 09:37:49.547 [DEBUG] [pool-1-thread-1] Adding type registration double -> org.hibernate.type.DoubleType@2b0d0ce5
+[host] 2016-05-18 09:37:49.547 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@2b0d0ce5
+[host] 2016-05-18 09:37:49.549 [DEBUG] [pool-1-thread-1] Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@1533a69e
+[host] 2016-05-18 09:37:49.550 [DEBUG] [pool-1-thread-1] Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@1533a69e
+[host] 2016-05-18 09:37:49.551 [DEBUG] [pool-1-thread-1] Adding type registration big_integer -> org.hibernate.type.BigIntegerType@96df6f5
+[host] 2016-05-18 09:37:49.552 [DEBUG] [pool-1-thread-1] Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@96df6f5
+[host] 2016-05-18 09:37:49.553 [DEBUG] [pool-1-thread-1] Adding type registration string -> org.hibernate.type.StringType@1dd2a7ed
+[host] 2016-05-18 09:37:49.554 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.String -> org.hibernate.type.StringType@1dd2a7ed
+[host] 2016-05-18 09:37:49.555 [DEBUG] [pool-1-thread-1] Adding type registration nstring -> org.hibernate.type.StringNVarcharType@5ae3a20c
+[host] 2016-05-18 09:37:49.556 [DEBUG] [pool-1-thread-1] Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@1da404f9
+[host] 2016-05-18 09:37:49.557 [DEBUG] [pool-1-thread-1] Adding type registration url -> org.hibernate.type.UrlType@27df784
+[host] 2016-05-18 09:37:49.558 [DEBUG] [pool-1-thread-1] Adding type registration java.net.URL -> org.hibernate.type.UrlType@27df784
+[host] 2016-05-18 09:37:49.560 [DEBUG] [pool-1-thread-1] Adding type registration date -> org.hibernate.type.DateType@3b88bc85
+[host] 2016-05-18 09:37:49.560 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Date -> org.hibernate.type.DateType@3b88bc85
+[host] 2016-05-18 09:37:49.563 [DEBUG] [pool-1-thread-1] Adding type registration time -> org.hibernate.type.TimeType@44608238
+[host] 2016-05-18 09:37:49.563 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Time -> org.hibernate.type.TimeType@44608238
+[host] 2016-05-18 09:37:49.565 [DEBUG] [pool-1-thread-1] Adding type registration timestamp -> org.hibernate.type.TimestampType@63bf6f94
+[host] 2016-05-18 09:37:49.566 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@63bf6f94
+[host] 2016-05-18 09:37:49.566 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Date -> org.hibernate.type.TimestampType@63bf6f94
+[host] 2016-05-18 09:37:49.569 [DEBUG] [pool-1-thread-1] Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1037449b
+[host] 2016-05-18 09:37:49.571 [DEBUG] [pool-1-thread-1] Adding type registration calendar -> org.hibernate.type.CalendarType@40cc918d
+[host] 2016-05-18 09:37:49.571 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@40cc918d
+[host] 2016-05-18 09:37:49.571 [DEBUG] [pool-1-thread-1] Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@40cc918d
+[host] 2016-05-18 09:37:49.572 [DEBUG] [pool-1-thread-1] Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@30cbd684
+[host] 2016-05-18 09:37:49.574 [DEBUG] [pool-1-thread-1] Adding type registration locale -> org.hibernate.type.LocaleType@58174505
+[host] 2016-05-18 09:37:49.574 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@58174505
+[host] 2016-05-18 09:37:49.575 [DEBUG] [pool-1-thread-1] Adding type registration currency -> org.hibernate.type.CurrencyType@91c95c0
+[host] 2016-05-18 09:37:49.576 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@91c95c0
+[host] 2016-05-18 09:37:49.578 [DEBUG] [pool-1-thread-1] Adding type registration timezone -> org.hibernate.type.TimeZoneType@16f5d08e
+[host] 2016-05-18 09:37:49.578 [DEBUG] [pool-1-thread-1] Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@16f5d08e
+[host] 2016-05-18 09:37:49.580 [DEBUG] [pool-1-thread-1] Adding type registration class -> org.hibernate.type.ClassType@65dad426
+[host] 2016-05-18 09:37:49.580 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Class -> org.hibernate.type.ClassType@65dad426
+[host] 2016-05-18 09:37:49.583 [DEBUG] [pool-1-thread-1] Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@6c57093c
+[host] 2016-05-18 09:37:49.584 [DEBUG] [pool-1-thread-1] Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@6c57093c
+[host] 2016-05-18 09:37:49.585 [DEBUG] [pool-1-thread-1] Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@4bd3db5c
+[host] 2016-05-18 09:37:49.588 [DEBUG] [pool-1-thread-1] Adding type registration binary -> org.hibernate.type.BinaryType@3bdb4108
+[host] 2016-05-18 09:37:49.588 [DEBUG] [pool-1-thread-1] Adding type registration byte[] -> org.hibernate.type.BinaryType@3bdb4108
+[host] 2016-05-18 09:37:49.589 [DEBUG] [pool-1-thread-1] Adding type registration [B -> org.hibernate.type.BinaryType@3bdb4108
+[host] 2016-05-18 09:37:49.592 [DEBUG] [pool-1-thread-1] Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@a2ff27c
+[host] 2016-05-18 09:37:49.592 [DEBUG] [pool-1-thread-1] Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@a2ff27c
+[host] 2016-05-18 09:37:49.593 [DEBUG] [pool-1-thread-1] Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@a2ff27c
+[host] 2016-05-18 09:37:49.595 [DEBUG] [pool-1-thread-1] Adding type registration image -> org.hibernate.type.ImageType@552b8081
+[host] 2016-05-18 09:37:49.596 [DEBUG] [pool-1-thread-1] Adding type registration characters -> org.hibernate.type.CharArrayType@5996acc2
+[host] 2016-05-18 09:37:49.597 [DEBUG] [pool-1-thread-1] Adding type registration char[] -> org.hibernate.type.CharArrayType@5996acc2
+[host] 2016-05-18 09:37:49.597 [DEBUG] [pool-1-thread-1] Adding type registration [C -> org.hibernate.type.CharArrayType@5996acc2
+[host] 2016-05-18 09:37:49.600 [DEBUG] [pool-1-thread-1] Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@2d35d6af
+[host] 2016-05-18 09:37:49.600 [DEBUG] [pool-1-thread-1] Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@2d35d6af
+[host] 2016-05-18 09:37:49.600 [DEBUG] [pool-1-thread-1] Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@2d35d6af
+[host] 2016-05-18 09:37:49.604 [DEBUG] [pool-1-thread-1] Adding type registration text -> org.hibernate.type.TextType@7bea4ab9
+[host] 2016-05-18 09:37:49.605 [DEBUG] [pool-1-thread-1] Adding type registration ntext -> org.hibernate.type.NTextType@3ff9f777
+[host] 2016-05-18 09:37:49.612 [DEBUG] [pool-1-thread-1] Adding type registration blob -> org.hibernate.type.BlobType@12ec440a
+[host] 2016-05-18 09:37:49.612 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@12ec440a
+[host] 2016-05-18 09:37:49.613 [DEBUG] [pool-1-thread-1] Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@389c90cc
+[host] 2016-05-18 09:37:49.618 [DEBUG] [pool-1-thread-1] Adding type registration clob -> org.hibernate.type.ClobType@7a960b08
+[host] 2016-05-18 09:37:49.618 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@7a960b08
+[host] 2016-05-18 09:37:49.624 [DEBUG] [pool-1-thread-1] Adding type registration nclob -> org.hibernate.type.NClobType@6e8e86bd
+[host] 2016-05-18 09:37:49.624 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@6e8e86bd
+[host] 2016-05-18 09:37:49.625 [DEBUG] [pool-1-thread-1] Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@3fc52f9e
+[host] 2016-05-18 09:37:49.626 [DEBUG] [pool-1-thread-1] Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@e63a671
+[host] 2016-05-18 09:37:49.628 [DEBUG] [pool-1-thread-1] Adding type registration serializable -> org.hibernate.type.SerializableType@6695c13b
+[host] 2016-05-18 09:37:49.633 [DEBUG] [pool-1-thread-1] Adding type registration object -> org.hibernate.type.ObjectType@426dee1
+[host] 2016-05-18 09:37:49.633 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@426dee1
+[host] 2016-05-18 09:37:49.634 [DEBUG] [pool-1-thread-1] Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@3e3202d3
+[host] 2016-05-18 09:37:49.634 [DEBUG] [pool-1-thread-1] Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@45578a8b
+[host] 2016-05-18 09:37:49.634 [DEBUG] [pool-1-thread-1] Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@7648cf3d
+[host] 2016-05-18 09:37:49.634 [DEBUG] [pool-1-thread-1] Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@261dea76
+[host] 2016-05-18 09:37:49.635 [DEBUG] [pool-1-thread-1] Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@760bfc86
+[host] 2016-05-18 09:37:49.635 [DEBUG] [pool-1-thread-1] Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@ceffdf6
+[host] 2016-05-18 09:37:49.635 [DEBUG] [pool-1-thread-1] Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@600a281c
+[host] 2016-05-18 09:37:49.635 [DEBUG] [pool-1-thread-1] Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@3acf7786
+[host] 2016-05-18 09:37:49.653 [WARN] [pool-1-thread-1] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[host] 2016-05-18 09:37:49.665 [INFO] [pool-1-thread-1] HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+[host] 2016-05-18 09:37:49.665 [INFO] [pool-1-thread-1] HHH10001001: Connection properties: {useUnicode=true, user=root, password=123456, characterEncoding=utf8, useSSL=false}
+[host] 2016-05-18 09:37:49.666 [INFO] [pool-1-thread-1] HHH10001003: Autocommit mode: false
+[host] 2016-05-18 09:37:49.672 [DEBUG] [pool-1-thread-1] Initializing Connection pool with 1 Connections
+[host] 2016-05-18 09:37:49.672 [INFO] [pool-1-thread-1] HHH000115: Hibernate connection pool size: 2 (min=1)
+[host] 2016-05-18 09:37:50.056 [DEBUG] [pool-1-thread-1] Database ->
+       name : MySQL
+    version : 5.7.11
+      major : 5
+      minor : 7
+[host] 2016-05-18 09:37:50.056 [DEBUG] [pool-1-thread-1] Driver ->
+       name : MySQL Connector Java
+    version : mysql-connector-java-5.1.38 ( Revision: fe541c166cec739c74cc727c5da96c1028b4834a )
+      major : 5
+      minor : 1
+[host] 2016-05-18 09:37:50.057 [DEBUG] [pool-1-thread-1] JDBC version : 4.0
+[host] 2016-05-18 09:37:50.100 [INFO] [pool-1-thread-1] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[host] 2016-05-18 09:37:50.165 [DEBUG] [pool-1-thread-1] JDBC driver metadata reported database stores quoted identifiers in more than one case
+[host] 2016-05-18 09:37:50.178 [DEBUG] [pool-1-thread-1] IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+[host] 2016-05-18 09:37:50.282 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[host] 2016-05-18 09:37:50.283 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[host] 2016-05-18 09:37:50.285 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[host] 2016-05-18 09:37:50.285 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[host] 2016-05-18 09:37:50.286 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[host] 2016-05-18 09:37:50.289 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[host] 2016-05-18 09:37:50.290 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[host] 2016-05-18 09:37:50.294 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[host] 2016-05-18 09:37:50.297 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[host] 2016-05-18 09:37:50.298 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[host] 2016-05-18 09:37:50.299 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[host] 2016-05-18 09:37:50.300 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[host] 2016-05-18 09:37:50.300 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[host] 2016-05-18 09:37:50.302 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[host] 2016-05-18 09:37:50.376 [DEBUG] [pool-1-thread-1] Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[host] 2016-05-18 09:37:50.442 [DEBUG] [pool-1-thread-1] Building session factory
+[host] 2016-05-18 09:37:50.444 [DEBUG] [pool-1-thread-1] SessionFactory name : null
+[host] 2016-05-18 09:37:50.445 [DEBUG] [pool-1-thread-1] Automatic flush during beforeCompletion(): disabled
+[host] 2016-05-18 09:37:50.445 [DEBUG] [pool-1-thread-1] Automatic session close at end of transaction: disabled
+[host] 2016-05-18 09:37:50.445 [DEBUG] [pool-1-thread-1] Statistics: disabled
+[host] 2016-05-18 09:37:50.445 [DEBUG] [pool-1-thread-1] Deleted entity synthetic identifier rollback: disabled
+[host] 2016-05-18 09:37:50.445 [DEBUG] [pool-1-thread-1] Default entity-mode: pojo
+[host] 2016-05-18 09:37:50.445 [DEBUG] [pool-1-thread-1] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[host] 2016-05-18 09:37:50.446 [DEBUG] [pool-1-thread-1] Allow initialization of lazy state outside session : disabled
+[host] 2016-05-18 09:37:50.446 [DEBUG] [pool-1-thread-1] Using BatchFetchStyle : LEGACY
+[host] 2016-05-18 09:37:50.446 [DEBUG] [pool-1-thread-1] Default batch fetch size: -1
+[host] 2016-05-18 09:37:50.446 [DEBUG] [pool-1-thread-1] Maximum outer join fetch depth: 2
+[host] 2016-05-18 09:37:50.446 [DEBUG] [pool-1-thread-1] Default null ordering: NONE
+[host] 2016-05-18 09:37:50.446 [DEBUG] [pool-1-thread-1] Order SQL updates by primary key: disabled
+[host] 2016-05-18 09:37:50.447 [DEBUG] [pool-1-thread-1] Order SQL inserts for batching: disabled
+[host] 2016-05-18 09:37:50.447 [DEBUG] [pool-1-thread-1] multi-tenancy strategy : NONE
+[host] 2016-05-18 09:37:50.447 [DEBUG] [pool-1-thread-1] JTA Track by Thread: enabled
+[host] 2016-05-18 09:37:50.447 [DEBUG] [pool-1-thread-1] Query language substitutions: {}
+[host] 2016-05-18 09:37:50.447 [DEBUG] [pool-1-thread-1] JPA query language strict compliance: disabled
+[host] 2016-05-18 09:37:50.448 [DEBUG] [pool-1-thread-1] Named query checking : enabled
+[host] 2016-05-18 09:37:50.448 [DEBUG] [pool-1-thread-1] Second-level cache: enabled
+[host] 2016-05-18 09:37:50.448 [DEBUG] [pool-1-thread-1] Second-level query cache: disabled
+[host] 2016-05-18 09:37:50.448 [DEBUG] [pool-1-thread-1] Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@52ad106f
+[host] 2016-05-18 09:37:50.448 [DEBUG] [pool-1-thread-1] Second-level cache region prefix: null
+[host] 2016-05-18 09:37:50.449 [DEBUG] [pool-1-thread-1] Optimize second-level cache for minimal puts: disabled
+[host] 2016-05-18 09:37:50.449 [DEBUG] [pool-1-thread-1] Structured second-level cache entries: disabled
+[host] 2016-05-18 09:37:50.449 [DEBUG] [pool-1-thread-1] Second-level cache direct-reference entries: disabled
+[host] 2016-05-18 09:37:50.449 [DEBUG] [pool-1-thread-1] Automatic eviction of collection cache: disabled
+[host] 2016-05-18 09:37:50.450 [DEBUG] [pool-1-thread-1] JDBC batch size: 15
+[host] 2016-05-18 09:37:50.450 [DEBUG] [pool-1-thread-1] JDBC batch updates for versioned data: enabled
+[host] 2016-05-18 09:37:50.450 [DEBUG] [pool-1-thread-1] Scrollable result sets: enabled
+[host] 2016-05-18 09:37:50.450 [DEBUG] [pool-1-thread-1] Wrap result sets: disabled
+[host] 2016-05-18 09:37:50.451 [DEBUG] [pool-1-thread-1] JDBC3 getGeneratedKeys(): enabled
+[host] 2016-05-18 09:37:50.451 [DEBUG] [pool-1-thread-1] JDBC result set fetch size: null
+[host] 2016-05-18 09:37:50.451 [DEBUG] [pool-1-thread-1] Connection release mode: ON_CLOSE
+[host] 2016-05-18 09:37:50.451 [DEBUG] [pool-1-thread-1] Generate SQL with comments: disabled
+[host] 2016-05-18 09:37:50.539 [DEBUG] [pool-1-thread-1] Session factory constructed with filter configurations : {}
+[host] 2016-05-18 09:37:50.539 [DEBUG] [pool-1-thread-1] Instantiating session factory with properties: {java.vendor=Oracle Corporation, show_sql=true, sun.java.launcher=SUN_STANDARD, hibernate.connection.url=jdbc:mysql://localhost:3306/test, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, hibernate.connection.characterEncoding=utf8, os.name=Mac OS X, hbm2ddl.auto=update, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/classes, hibernate.current_session_context_class=thread, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.7.0_80-b15, hibernate.cache.provider_class=org.hibernate.cache.internal.NoCacheProvider, user.name=shc, connection.driver_class=com.mysql.jdbc.Driver, hibernate.connection.useSSL=false, current_session_context_class=thread, user.language=zh, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib, dialect=org.hibernate.dialect.MySQLDialect, java.version=1.7.0_80, user.timezone=Asia/Shanghai, sun.arch.data.model=64, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, java.specification.name=Java Platform API Specification, file.separator=/, java.class.version=51.0, user.country=CN, connection.url=jdbc:mysql://localhost:3306/test, java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre, java.vm.info=mixed mode, os.version=10.11.4, connection.useSSL=false, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@201ce18c, connection.useUnicode=true, path.separator=:, connection.password=123456, java.vm.version=24.80-b11, hibernate.connection.password=123456, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, sun.io.unicode.encoding=UnicodeBig, awt.toolkit=sun.lwawt.macosx.LWCToolkit, hibernate.connection.username=root, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, user.home=/Users/shc, java.specification.vendor=Oracle Corporation, hibernate.hbm2ddl.auto=update, java.library.path=/Users/shc/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor.url=http://java.oracle.com/, hibernate.connection.driver_class=com.mysql.jdbc.Driver, connection.username=root, java.vm.vendor=Oracle Corporation, gopherProxySet=false, hibernate.dialect=org.hibernate.dialect.MySQLDialect, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=com.shc.mifty.startup.Bootstrap, java.class.path=/Users/shc/Desktop/devspace/javaspace/mifty/target/classes:/Users/shc/Desktop/devspace/maven_repository/org/apache/thrift/libthrift/0.9.3/libthrift-0.9.3.jar:/Users/shc/Desktop/devspace/maven_repository/org/apache/httpcomponents/httpclient/4.4.1/httpclient-4.4.1.jar:/Users/shc/Desktop/devspace/maven_repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/shc/Desktop/devspace/maven_repository/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar:/Users/shc/Desktop/devspace/maven_repository/com/google/code/gson/gson/2.6.2/gson-2.6.2.jar:/Users/shc/Desktop/devspace/maven_repository/org/hibernate/hibernate-core/5.1.0.Final/hibernate-core-5.1.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/Users/shc/Desktop/devspace/maven_repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/shc/Desktop/devspace/maven_repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar:/Users/shc/Desktop/devspace/maven_repository/org/jboss/jandex/2.0.0.Final/jandex-2.0.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/com/fasterxml/classmate/1.3.0/classmate-1.3.0.jar:/Users/shc/Desktop/devspace/maven_repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/Users/shc/Desktop/devspace/maven_repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/Users/shc/Desktop/devspace/maven_repository/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final/hibernate-commons-annotations-5.0.1.Final.jar:/Users/shc/Desktop/devspace/maven_repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar:/Users/shc/Desktop/devspace/maven_repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/shc/Desktop/devspace/maven_repository/org/slf4j/slf4j-log4j12/1.7.21/slf4j-log4j12-1.7.21.jar:/Users/shc/Desktop/devspace/maven_repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/shc/Desktop/devspace/javaspace/crossing/target/classes:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/mina-core-2.0.2.jar:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/sharp-container-1.0.jar:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/log4j-repackaged.jar:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/sharp-container-example-1.0.jar:/Users/shc/Desktop/devspace/maven_repository/com/google/protobuf/protobuf-java/2.6.1/protobuf-java-2.6.1.jar:/Users/shc/Desktop/devspace/maven_repository/io/netty/netty-all/4.0.36.Final/netty-all-4.0.36.Final.jar:/Users/shc/Desktop/devspace/maven_repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/Users/shc/Desktop/devspace/maven_repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/shc/Desktop/devspace/maven_repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/shc/Desktop/devspace/maven_repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar, hibernate.bytecode.use_reflection_optimizer=false, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.7, sun.cpu.endian=little, sun.os.patch.level=unknown, connection.pool_size=2, java.io.tmpdir=/var/folders/p6/yc3hvzns3x7csz6jk52w10380000gn/T/, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, os.arch=x86_64, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, java.ext.dirs=/Users/shc/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, hibernate.connection.useUnicode=true, user.dir=/Users/shc/Desktop/devspace/javaspace/mifty, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, cache.provider_class=org.hibernate.cache.internal.NoCacheProvider, file.encoding=UTF-8, connection.characterEncoding=utf8, java.specification.version=1.7, hibernate.show_sql=true, hibernate.connection.pool_size=2}
+[host] 2016-05-18 09:37:50.560 [DEBUG] [pool-1-thread-1] Skipping JACC integration as it was not enabled
+[host] 2016-05-18 09:37:50.570 [DEBUG] [pool-1-thread-1] Instantiated session factory
+[host] 2016-05-18 09:37:50.615 [DEBUG] [pool-1-thread-1] Checking 0 named HQL queries
+[host] 2016-05-18 09:37:50.615 [DEBUG] [pool-1-thread-1] Checking 0 named SQL queries
+[host] 2016-05-18 09:37:50.617 [DEBUG] [pool-1-thread-1] Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@60e85e25
+[host] 2016-05-18 09:37:50.622 [DEBUG] [pool-1-thread-1] Registering SessionFactory: 963f5775-57c5-4cde-8086-ae069e0cbc1b (<unnamed>)
+[host] 2016-05-18 09:37:50.622 [DEBUG] [pool-1-thread-1] Not binding SessionFactory to JNDI, no JNDI name configured
+[host] 2016-05-18 09:37:50.707 [DEBUG] [pool-1-thread-1] Statistics initialized [enabled=false]
+[host] 2016-05-18 09:37:50.711 [DEBUG] [pool-1-thread-1] begin
+[host] 2016-05-18 09:37:50.745 [DEBUG] [pool-1-thread-1] insert into test.user (uid,name) values (3,'zhouguoxing'); 
+[host] 2016-05-18 09:37:50.770 [DEBUG] [pool-1-thread-1] delete from test.user where uid=1; 
+[host] 2016-05-18 09:37:50.782 [DEBUG] [pool-1-thread-1] committing
+[host] 2016-05-18 09:37:50.787 [INFO] [pool-1-thread-1] 
+name: Darren
+say: Good morning!
+[host] 2016-05-18 09:37:50.788 [DEBUG] [pool-1-thread-1] source: {"sentence":"Hi, Darren ,Good morning!"} signKey: miftyExampleKey
+[host] 2016-05-18 09:37:50.789 [DEBUG] [pool-1-thread-1] sayHello: {"encrypted":"ubUVRZ7gfuRI6GxgNpVEw1nnmwy+J9bbuis4kCz+XvQ/VjGKv3wcxNoiSahhy0dw/Net8Oc5aaE0VFQZDkZ+1cfp7ZuKpo1PauVSt7tVmInUH1EwxOoLKPKRArKRUr/l","errorCode":0,"errorInfo":"Success"}
+[host] 2016-05-18 09:38:20.060 [DEBUG] [pool-2-thread-1] Connection pool now considered primed; min-size will be maintained
+[host] 2016-05-18 09:42:06.803 [DEBUG] [main] p: {"echo":"How are you!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:42:06.837 [DEBUG] [pool-1-thread-2] echo: {"sign":"E00192D3EF9539AD4C3A634064FEC575","params":{"echo":"How are you!","name":"Darren"}}
+[host] 2016-05-18 09:42:06.837 [DEBUG] [pool-1-thread-2] source: {"echo":"How are you!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:42:06.838 [INFO] [pool-1-thread-2] 
+name: Darren
+say: How are you!
+[host] 2016-05-18 09:42:06.839 [DEBUG] [pool-1-thread-2] source: {"sentence":"Hi, Darren ,How are you!"} signKey: miftyExampleKey
+[host] 2016-05-18 09:42:06.839 [DEBUG] [pool-1-thread-2] sayHello: {"sign":"23E7A98AFE424ADA0A8DC2D32AC71230","params":{"sentence":"Hi, Darren ,How are you!"},"errorCode":0,"errorInfo":"Success"}
+[host] 2016-05-18 09:42:06.847 [DEBUG] [main] p: {"hello":"Good morning!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:42:07.106 [DEBUG] [pool-1-thread-2] sayHello: {"encrypted":"ubUVRZ7gfuScyBl/cKNvZ4mU79L5s0fMPlLTwIrhAvbQhV81QuWz42JN6uzyqXrT87UF6DuzniEDzDWBQTj6BSHOJKF7i4SPv6Z6JPhgfHSrmg92+jHQajTACZbx06uq"}
+[host] 2016-05-18 09:42:07.108 [DEBUG] [pool-1-thread-2] source: {"hello":"Good morning!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:42:07.109 [DEBUG] [pool-1-thread-2] begin
+[host] 2016-05-18 09:42:07.112 [DEBUG] [pool-1-thread-2] insert into test.user (uid,name) values (3,'zhouguoxing'); 
+[host] 2016-05-18 09:42:07.115 [DEBUG] [pool-1-thread-2] delete from test.user where uid=1; 
+[host] 2016-05-18 09:42:07.116 [DEBUG] [pool-1-thread-2] committing
+[host] 2016-05-18 09:42:07.118 [INFO] [pool-1-thread-2] 
+name: Darren
+say: Good morning!
+[host] 2016-05-18 09:42:07.118 [DEBUG] [pool-1-thread-2] source: {"sentence":"Hi, Darren ,Good morning!"} signKey: miftyExampleKey
+[host] 2016-05-18 09:42:07.119 [DEBUG] [pool-1-thread-2] sayHello: {"encrypted":"ubUVRZ7gfuRI6GxgNpVEw1nnmwy+J9bbuis4kCz+XvQ/VjGKv3wcxNoiSahhy0dw/Net8Oc5aaE0VFQZDkZ+1cfp7ZuKpo1PauVSt7tVmInUH1EwxOoLKPKRArKRUr/l","errorCode":0,"errorInfo":"Success"}
+[host] 2016-05-18 09:48:34.749 [DEBUG] [main] Initializing ConfigWizard.
+[host] 2016-05-18 09:48:34.754 [DEBUG] [main] loading ServerConfig
+[host] 2016-05-18 09:48:34.803 [DEBUG] [main] FileName set to conf/server.properties
+[host] 2016-05-18 09:48:34.806 [DEBUG] [main] ConfigurationUtils.locate(): base is null, name is conf/server.properties
+[host] 2016-05-18 09:48:34.806 [DEBUG] [main] Could not locate file conf/server.properties at null: no protocol: conf/server.properties
+[host] 2016-05-18 09:48:34.812 [DEBUG] [main] Loading configuration from the path conf/server.properties
+[host] 2016-05-18 09:48:34.812 [DEBUG] [main] Base path set to file:///Users/shc/Desktop/devspace/javaspace/mifty/conf/server.properties
+[host] 2016-05-18 09:48:34.850 [INFO] [main] ServerConfig:
+server.bind_address           = 0.0.0.0
+server.decrypt.key            = miftyExampleKey
+server.port                   = 9090
+server.backlog                = 100
+server.encrypt.type           = DES
+server.sign.key               = miftyExampleKey
+server.sign.type              = MD5
+server.keystore               = /data/keystore
+server.ssl.enabled            = false
+server.ssl.port               = 9091
+server.encrypt.key            = miftyExampleKey
+
+[host] 2016-05-18 09:48:34.851 [DEBUG] [main] Initializing DaoWizard.
+[host] 2016-05-18 09:48:34.892 [INFO] [Thread-0] Starting Mifty server...
+[host] 2016-05-18 09:48:37.477 [DEBUG] [main] p: {"echo":"How are you!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:48:37.523 [DEBUG] [pool-1-thread-1] echo: {"sign":"E00192D3EF9539AD4C3A634064FEC575","params":{"echo":"How are you!","name":"Darren"}}
+[host] 2016-05-18 09:48:37.568 [DEBUG] [pool-1-thread-1] source: {"echo":"How are you!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:48:37.582 [INFO] [pool-1-thread-1] 
+name: Darren
+say: How are you!
+[host] 2016-05-18 09:48:37.582 [DEBUG] [pool-1-thread-1] source: {"sentence":"Hi, Darren ,How are you!"} signKey: miftyExampleKey
+[host] 2016-05-18 09:48:37.583 [DEBUG] [pool-1-thread-1] sayHello: {"sign":"23E7A98AFE424ADA0A8DC2D32AC71230","params":{"sentence":"Hi, Darren ,How are you!"},"errorCode":0,"errorInfo":"Success"}
+[host] 2016-05-18 09:48:37.587 [DEBUG] [main] p: {"hello":"Good morning!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:48:37.823 [DEBUG] [pool-1-thread-1] sayHello: {"encrypted":"ubUVRZ7gfuScyBl/cKNvZ4mU79L5s0fMPlLTwIrhAvbQhV81QuWz42JN6uzyqXrT87UF6DuzniEDzDWBQTj6BSHOJKF7i4SPv6Z6JPhgfHSrmg92+jHQajTACZbx06uq"}
+[host] 2016-05-18 09:48:38.036 [DEBUG] [pool-1-thread-1] source: {"hello":"Good morning!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:48:38.079 [DEBUG] [pool-1-thread-1] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[host] 2016-05-18 09:48:38.090 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[host] 2016-05-18 09:48:38.093 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[host] 2016-05-18 09:48:38.097 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[host] 2016-05-18 09:48:38.251 [INFO] [pool-1-thread-1] HHH000412: Hibernate Core {5.1.0.Final}
+[host] 2016-05-18 09:48:38.253 [INFO] [pool-1-thread-1] HHH000206: hibernate.properties not found
+[host] 2016-05-18 09:48:38.254 [INFO] [pool-1-thread-1] HHH000021: Bytecode provider name : javassist
+[host] 2016-05-18 09:48:38.291 [DEBUG] [pool-1-thread-1] Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD 3.0//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+[host] 2016-05-18 09:48:38.291 [DEBUG] [pool-1-thread-1] Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+[host] 2016-05-18 09:48:38.295 [DEBUG] [pool-1-thread-1] cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+[host] 2016-05-18 09:48:38.507 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[host] 2016-05-18 09:48:38.508 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[host] 2016-05-18 09:48:38.508 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[host] 2016-05-18 09:48:38.532 [DEBUG] [pool-1-thread-1] Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[host] 2016-05-18 09:48:38.532 [DEBUG] [pool-1-thread-1] Building session factory using provided StandardServiceRegistry
+[host] 2016-05-18 09:48:38.550 [DEBUG] [pool-1-thread-1] Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[host] 2016-05-18 09:48:38.560 [INFO] [pool-1-thread-1] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[host] 2016-05-18 09:48:38.604 [DEBUG] [pool-1-thread-1] Adding type registration boolean -> org.hibernate.type.BooleanType@26f5c589
+[host] 2016-05-18 09:48:38.604 [DEBUG] [pool-1-thread-1] Adding type registration boolean -> org.hibernate.type.BooleanType@26f5c589
+[host] 2016-05-18 09:48:38.604 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@26f5c589
+[host] 2016-05-18 09:48:38.606 [DEBUG] [pool-1-thread-1] Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@337084b8
+[host] 2016-05-18 09:48:38.608 [DEBUG] [pool-1-thread-1] Adding type registration true_false -> org.hibernate.type.TrueFalseType@21b0e7e3
+[host] 2016-05-18 09:48:38.609 [DEBUG] [pool-1-thread-1] Adding type registration yes_no -> org.hibernate.type.YesNoType@51ff177c
+[host] 2016-05-18 09:48:38.611 [DEBUG] [pool-1-thread-1] Adding type registration byte -> org.hibernate.type.ByteType@56ec4221
+[host] 2016-05-18 09:48:38.611 [DEBUG] [pool-1-thread-1] Adding type registration byte -> org.hibernate.type.ByteType@56ec4221
+[host] 2016-05-18 09:48:38.612 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@56ec4221
+[host] 2016-05-18 09:48:38.613 [DEBUG] [pool-1-thread-1] Adding type registration character -> org.hibernate.type.CharacterType@207e7fdb
+[host] 2016-05-18 09:48:38.613 [DEBUG] [pool-1-thread-1] Adding type registration char -> org.hibernate.type.CharacterType@207e7fdb
+[host] 2016-05-18 09:48:38.614 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@207e7fdb
+[host] 2016-05-18 09:48:38.616 [DEBUG] [pool-1-thread-1] Adding type registration short -> org.hibernate.type.ShortType@54889003
+[host] 2016-05-18 09:48:38.617 [DEBUG] [pool-1-thread-1] Adding type registration short -> org.hibernate.type.ShortType@54889003
+[host] 2016-05-18 09:48:38.617 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Short -> org.hibernate.type.ShortType@54889003
+[host] 2016-05-18 09:48:38.619 [DEBUG] [pool-1-thread-1] Adding type registration integer -> org.hibernate.type.IntegerType@d3ceb07
+[host] 2016-05-18 09:48:38.619 [DEBUG] [pool-1-thread-1] Adding type registration int -> org.hibernate.type.IntegerType@d3ceb07
+[host] 2016-05-18 09:48:38.619 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@d3ceb07
+[host] 2016-05-18 09:48:38.622 [DEBUG] [pool-1-thread-1] Adding type registration long -> org.hibernate.type.LongType@657f6c43
+[host] 2016-05-18 09:48:38.622 [DEBUG] [pool-1-thread-1] Adding type registration long -> org.hibernate.type.LongType@657f6c43
+[host] 2016-05-18 09:48:38.622 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Long -> org.hibernate.type.LongType@657f6c43
+[host] 2016-05-18 09:48:38.624 [DEBUG] [pool-1-thread-1] Adding type registration float -> org.hibernate.type.FloatType@2c21a48f
+[host] 2016-05-18 09:48:38.624 [DEBUG] [pool-1-thread-1] Adding type registration float -> org.hibernate.type.FloatType@2c21a48f
+[host] 2016-05-18 09:48:38.624 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Float -> org.hibernate.type.FloatType@2c21a48f
+[host] 2016-05-18 09:48:38.626 [DEBUG] [pool-1-thread-1] Adding type registration double -> org.hibernate.type.DoubleType@1aa0c35b
+[host] 2016-05-18 09:48:38.626 [DEBUG] [pool-1-thread-1] Adding type registration double -> org.hibernate.type.DoubleType@1aa0c35b
+[host] 2016-05-18 09:48:38.627 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@1aa0c35b
+[host] 2016-05-18 09:48:38.629 [DEBUG] [pool-1-thread-1] Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@c200022
+[host] 2016-05-18 09:48:38.629 [DEBUG] [pool-1-thread-1] Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@c200022
+[host] 2016-05-18 09:48:38.630 [DEBUG] [pool-1-thread-1] Adding type registration big_integer -> org.hibernate.type.BigIntegerType@fb8896c
+[host] 2016-05-18 09:48:38.631 [DEBUG] [pool-1-thread-1] Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@fb8896c
+[host] 2016-05-18 09:48:38.632 [DEBUG] [pool-1-thread-1] Adding type registration string -> org.hibernate.type.StringType@4258f598
+[host] 2016-05-18 09:48:38.632 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.String -> org.hibernate.type.StringType@4258f598
+[host] 2016-05-18 09:48:38.634 [DEBUG] [pool-1-thread-1] Adding type registration nstring -> org.hibernate.type.StringNVarcharType@6944e8c1
+[host] 2016-05-18 09:48:38.635 [DEBUG] [pool-1-thread-1] Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@7265fa44
+[host] 2016-05-18 09:48:38.636 [DEBUG] [pool-1-thread-1] Adding type registration url -> org.hibernate.type.UrlType@5922556f
+[host] 2016-05-18 09:48:38.637 [DEBUG] [pool-1-thread-1] Adding type registration java.net.URL -> org.hibernate.type.UrlType@5922556f
+[host] 2016-05-18 09:48:38.639 [DEBUG] [pool-1-thread-1] Adding type registration date -> org.hibernate.type.DateType@23bdce67
+[host] 2016-05-18 09:48:38.639 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Date -> org.hibernate.type.DateType@23bdce67
+[host] 2016-05-18 09:48:38.641 [DEBUG] [pool-1-thread-1] Adding type registration time -> org.hibernate.type.TimeType@11a8b0bd
+[host] 2016-05-18 09:48:38.641 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Time -> org.hibernate.type.TimeType@11a8b0bd
+[host] 2016-05-18 09:48:38.643 [DEBUG] [pool-1-thread-1] Adding type registration timestamp -> org.hibernate.type.TimestampType@59c5ed26
+[host] 2016-05-18 09:48:38.643 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@59c5ed26
+[host] 2016-05-18 09:48:38.643 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Date -> org.hibernate.type.TimestampType@59c5ed26
+[host] 2016-05-18 09:48:38.645 [DEBUG] [pool-1-thread-1] Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@70071305
+[host] 2016-05-18 09:48:38.647 [DEBUG] [pool-1-thread-1] Adding type registration calendar -> org.hibernate.type.CalendarType@5d221bc6
+[host] 2016-05-18 09:48:38.647 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@5d221bc6
+[host] 2016-05-18 09:48:38.647 [DEBUG] [pool-1-thread-1] Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@5d221bc6
+[host] 2016-05-18 09:48:38.648 [DEBUG] [pool-1-thread-1] Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@a9b0627
+[host] 2016-05-18 09:48:38.650 [DEBUG] [pool-1-thread-1] Adding type registration locale -> org.hibernate.type.LocaleType@160e9f2e
+[host] 2016-05-18 09:48:38.650 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@160e9f2e
+[host] 2016-05-18 09:48:38.652 [DEBUG] [pool-1-thread-1] Adding type registration currency -> org.hibernate.type.CurrencyType@533f452d
+[host] 2016-05-18 09:48:38.652 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@533f452d
+[host] 2016-05-18 09:48:38.654 [DEBUG] [pool-1-thread-1] Adding type registration timezone -> org.hibernate.type.TimeZoneType@5e7cf14d
+[host] 2016-05-18 09:48:38.654 [DEBUG] [pool-1-thread-1] Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@5e7cf14d
+[host] 2016-05-18 09:48:38.656 [DEBUG] [pool-1-thread-1] Adding type registration class -> org.hibernate.type.ClassType@20345a92
+[host] 2016-05-18 09:48:38.656 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Class -> org.hibernate.type.ClassType@20345a92
+[host] 2016-05-18 09:48:38.658 [DEBUG] [pool-1-thread-1] Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@473bb93a
+[host] 2016-05-18 09:48:38.658 [DEBUG] [pool-1-thread-1] Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@473bb93a
+[host] 2016-05-18 09:48:38.659 [DEBUG] [pool-1-thread-1] Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@389e5972
+[host] 2016-05-18 09:48:38.661 [DEBUG] [pool-1-thread-1] Adding type registration binary -> org.hibernate.type.BinaryType@3530cd4a
+[host] 2016-05-18 09:48:38.661 [DEBUG] [pool-1-thread-1] Adding type registration byte[] -> org.hibernate.type.BinaryType@3530cd4a
+[host] 2016-05-18 09:48:38.662 [DEBUG] [pool-1-thread-1] Adding type registration [B -> org.hibernate.type.BinaryType@3530cd4a
+[host] 2016-05-18 09:48:38.664 [DEBUG] [pool-1-thread-1] Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@fb71bb1
+[host] 2016-05-18 09:48:38.664 [DEBUG] [pool-1-thread-1] Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@fb71bb1
+[host] 2016-05-18 09:48:38.664 [DEBUG] [pool-1-thread-1] Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@fb71bb1
+[host] 2016-05-18 09:48:38.665 [DEBUG] [pool-1-thread-1] Adding type registration image -> org.hibernate.type.ImageType@2996771e
+[host] 2016-05-18 09:48:38.667 [DEBUG] [pool-1-thread-1] Adding type registration characters -> org.hibernate.type.CharArrayType@4223c010
+[host] 2016-05-18 09:48:38.667 [DEBUG] [pool-1-thread-1] Adding type registration char[] -> org.hibernate.type.CharArrayType@4223c010
+[host] 2016-05-18 09:48:38.668 [DEBUG] [pool-1-thread-1] Adding type registration [C -> org.hibernate.type.CharArrayType@4223c010
+[host] 2016-05-18 09:48:38.669 [DEBUG] [pool-1-thread-1] Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@74b43ba1
+[host] 2016-05-18 09:48:38.670 [DEBUG] [pool-1-thread-1] Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@74b43ba1
+[host] 2016-05-18 09:48:38.670 [DEBUG] [pool-1-thread-1] Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@74b43ba1
+[host] 2016-05-18 09:48:38.671 [DEBUG] [pool-1-thread-1] Adding type registration text -> org.hibernate.type.TextType@625d8db5
+[host] 2016-05-18 09:48:38.673 [DEBUG] [pool-1-thread-1] Adding type registration ntext -> org.hibernate.type.NTextType@533f785b
+[host] 2016-05-18 09:48:38.678 [DEBUG] [pool-1-thread-1] Adding type registration blob -> org.hibernate.type.BlobType@42ed705f
+[host] 2016-05-18 09:48:38.678 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@42ed705f
+[host] 2016-05-18 09:48:38.679 [DEBUG] [pool-1-thread-1] Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@19be1bc9
+[host] 2016-05-18 09:48:38.686 [DEBUG] [pool-1-thread-1] Adding type registration clob -> org.hibernate.type.ClobType@389c90cc
+[host] 2016-05-18 09:48:38.686 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@389c90cc
+[host] 2016-05-18 09:48:38.692 [DEBUG] [pool-1-thread-1] Adding type registration nclob -> org.hibernate.type.NClobType@becbc86
+[host] 2016-05-18 09:48:38.693 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@becbc86
+[host] 2016-05-18 09:48:38.693 [DEBUG] [pool-1-thread-1] Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@7cfbebeb
+[host] 2016-05-18 09:48:38.694 [DEBUG] [pool-1-thread-1] Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@64242b4a
+[host] 2016-05-18 09:48:38.695 [DEBUG] [pool-1-thread-1] Adding type registration serializable -> org.hibernate.type.SerializableType@5c25d8aa
+[host] 2016-05-18 09:48:38.699 [DEBUG] [pool-1-thread-1] Adding type registration object -> org.hibernate.type.ObjectType@cdffae5
+[host] 2016-05-18 09:48:38.699 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@cdffae5
+[host] 2016-05-18 09:48:38.700 [DEBUG] [pool-1-thread-1] Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@1906c58a
+[host] 2016-05-18 09:48:38.700 [DEBUG] [pool-1-thread-1] Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@b92f3dc
+[host] 2016-05-18 09:48:38.700 [DEBUG] [pool-1-thread-1] Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@5cc7f673
+[host] 2016-05-18 09:48:38.701 [DEBUG] [pool-1-thread-1] Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@4c05279b
+[host] 2016-05-18 09:48:38.701 [DEBUG] [pool-1-thread-1] Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@666b581a
+[host] 2016-05-18 09:48:38.701 [DEBUG] [pool-1-thread-1] Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@1165477e
+[host] 2016-05-18 09:48:38.701 [DEBUG] [pool-1-thread-1] Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1038aa1e
+[host] 2016-05-18 09:48:38.701 [DEBUG] [pool-1-thread-1] Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@78289fe3
+[host] 2016-05-18 09:48:38.713 [WARN] [pool-1-thread-1] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[host] 2016-05-18 09:48:38.719 [INFO] [pool-1-thread-1] HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+[host] 2016-05-18 09:48:38.720 [INFO] [pool-1-thread-1] HHH10001001: Connection properties: {useUnicode=true, user=root, password=123456, characterEncoding=utf8, useSSL=false}
+[host] 2016-05-18 09:48:38.720 [INFO] [pool-1-thread-1] HHH10001003: Autocommit mode: false
+[host] 2016-05-18 09:48:38.723 [DEBUG] [pool-1-thread-1] Initializing Connection pool with 1 Connections
+[host] 2016-05-18 09:48:38.724 [INFO] [pool-1-thread-1] HHH000115: Hibernate connection pool size: 2 (min=1)
+[host] 2016-05-18 09:48:39.018 [DEBUG] [pool-1-thread-1] Database ->
+       name : MySQL
+    version : 5.7.11
+      major : 5
+      minor : 7
+[host] 2016-05-18 09:48:39.018 [DEBUG] [pool-1-thread-1] Driver ->
+       name : MySQL Connector Java
+    version : mysql-connector-java-5.1.38 ( Revision: fe541c166cec739c74cc727c5da96c1028b4834a )
+      major : 5
+      minor : 1
+[host] 2016-05-18 09:48:39.037 [DEBUG] [pool-1-thread-1] JDBC version : 4.0
+[host] 2016-05-18 09:48:39.079 [INFO] [pool-1-thread-1] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[host] 2016-05-18 09:48:39.150 [DEBUG] [pool-1-thread-1] JDBC driver metadata reported database stores quoted identifiers in more than one case
+[host] 2016-05-18 09:48:39.162 [DEBUG] [pool-1-thread-1] IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+[host] 2016-05-18 09:48:39.256 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[host] 2016-05-18 09:48:39.257 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[host] 2016-05-18 09:48:39.259 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[host] 2016-05-18 09:48:39.259 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[host] 2016-05-18 09:48:39.261 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[host] 2016-05-18 09:48:39.263 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[host] 2016-05-18 09:48:39.264 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[host] 2016-05-18 09:48:39.266 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[host] 2016-05-18 09:48:39.267 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[host] 2016-05-18 09:48:39.268 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[host] 2016-05-18 09:48:39.269 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[host] 2016-05-18 09:48:39.270 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[host] 2016-05-18 09:48:39.271 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[host] 2016-05-18 09:48:39.272 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[host] 2016-05-18 09:48:39.311 [DEBUG] [pool-1-thread-1] Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[host] 2016-05-18 09:48:39.357 [DEBUG] [pool-1-thread-1] Building session factory
+[host] 2016-05-18 09:48:39.358 [DEBUG] [pool-1-thread-1] SessionFactory name : null
+[host] 2016-05-18 09:48:39.359 [DEBUG] [pool-1-thread-1] Automatic flush during beforeCompletion(): disabled
+[host] 2016-05-18 09:48:39.359 [DEBUG] [pool-1-thread-1] Automatic session close at end of transaction: disabled
+[host] 2016-05-18 09:48:39.359 [DEBUG] [pool-1-thread-1] Statistics: disabled
+[host] 2016-05-18 09:48:39.359 [DEBUG] [pool-1-thread-1] Deleted entity synthetic identifier rollback: disabled
+[host] 2016-05-18 09:48:39.359 [DEBUG] [pool-1-thread-1] Default entity-mode: pojo
+[host] 2016-05-18 09:48:39.359 [DEBUG] [pool-1-thread-1] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[host] 2016-05-18 09:48:39.360 [DEBUG] [pool-1-thread-1] Allow initialization of lazy state outside session : disabled
+[host] 2016-05-18 09:48:39.360 [DEBUG] [pool-1-thread-1] Using BatchFetchStyle : LEGACY
+[host] 2016-05-18 09:48:39.360 [DEBUG] [pool-1-thread-1] Default batch fetch size: -1
+[host] 2016-05-18 09:48:39.360 [DEBUG] [pool-1-thread-1] Maximum outer join fetch depth: 2
+[host] 2016-05-18 09:48:39.360 [DEBUG] [pool-1-thread-1] Default null ordering: NONE
+[host] 2016-05-18 09:48:39.361 [DEBUG] [pool-1-thread-1] Order SQL updates by primary key: disabled
+[host] 2016-05-18 09:48:39.361 [DEBUG] [pool-1-thread-1] Order SQL inserts for batching: disabled
+[host] 2016-05-18 09:48:39.361 [DEBUG] [pool-1-thread-1] multi-tenancy strategy : NONE
+[host] 2016-05-18 09:48:39.361 [DEBUG] [pool-1-thread-1] JTA Track by Thread: enabled
+[host] 2016-05-18 09:48:39.361 [DEBUG] [pool-1-thread-1] Query language substitutions: {}
+[host] 2016-05-18 09:48:39.362 [DEBUG] [pool-1-thread-1] JPA query language strict compliance: disabled
+[host] 2016-05-18 09:48:39.362 [DEBUG] [pool-1-thread-1] Named query checking : enabled
+[host] 2016-05-18 09:48:39.362 [DEBUG] [pool-1-thread-1] Second-level cache: enabled
+[host] 2016-05-18 09:48:39.362 [DEBUG] [pool-1-thread-1] Second-level query cache: disabled
+[host] 2016-05-18 09:48:39.362 [DEBUG] [pool-1-thread-1] Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@767ed29f
+[host] 2016-05-18 09:48:39.363 [DEBUG] [pool-1-thread-1] Second-level cache region prefix: null
+[host] 2016-05-18 09:48:39.363 [DEBUG] [pool-1-thread-1] Optimize second-level cache for minimal puts: disabled
+[host] 2016-05-18 09:48:39.363 [DEBUG] [pool-1-thread-1] Structured second-level cache entries: disabled
+[host] 2016-05-18 09:48:39.363 [DEBUG] [pool-1-thread-1] Second-level cache direct-reference entries: disabled
+[host] 2016-05-18 09:48:39.364 [DEBUG] [pool-1-thread-1] Automatic eviction of collection cache: disabled
+[host] 2016-05-18 09:48:39.364 [DEBUG] [pool-1-thread-1] JDBC batch size: 15
+[host] 2016-05-18 09:48:39.364 [DEBUG] [pool-1-thread-1] JDBC batch updates for versioned data: enabled
+[host] 2016-05-18 09:48:39.364 [DEBUG] [pool-1-thread-1] Scrollable result sets: enabled
+[host] 2016-05-18 09:48:39.364 [DEBUG] [pool-1-thread-1] Wrap result sets: disabled
+[host] 2016-05-18 09:48:39.365 [DEBUG] [pool-1-thread-1] JDBC3 getGeneratedKeys(): enabled
+[host] 2016-05-18 09:48:39.365 [DEBUG] [pool-1-thread-1] JDBC result set fetch size: null
+[host] 2016-05-18 09:48:39.365 [DEBUG] [pool-1-thread-1] Connection release mode: ON_CLOSE
+[host] 2016-05-18 09:48:39.365 [DEBUG] [pool-1-thread-1] Generate SQL with comments: disabled
+[host] 2016-05-18 09:48:39.413 [DEBUG] [pool-1-thread-1] Session factory constructed with filter configurations : {}
+[host] 2016-05-18 09:48:39.413 [DEBUG] [pool-1-thread-1] Instantiating session factory with properties: {java.vendor=Oracle Corporation, show_sql=true, sun.java.launcher=SUN_STANDARD, hibernate.connection.url=jdbc:mysql://localhost:3306/test, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, hibernate.connection.characterEncoding=utf8, os.name=Mac OS X, hbm2ddl.auto=update, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/classes, hibernate.current_session_context_class=thread, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.7.0_80-b15, hibernate.cache.provider_class=org.hibernate.cache.internal.NoCacheProvider, user.name=shc, connection.driver_class=com.mysql.jdbc.Driver, hibernate.connection.useSSL=false, current_session_context_class=thread, user.language=zh, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib, dialect=org.hibernate.dialect.MySQLDialect, java.version=1.7.0_80, user.timezone=Asia/Shanghai, sun.arch.data.model=64, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, java.specification.name=Java Platform API Specification, file.separator=/, java.class.version=51.0, user.country=CN, connection.url=jdbc:mysql://localhost:3306/test, java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre, java.vm.info=mixed mode, os.version=10.11.4, connection.useSSL=false, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@ecb57e0, connection.useUnicode=true, path.separator=:, connection.password=123456, java.vm.version=24.80-b11, hibernate.connection.password=123456, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, sun.io.unicode.encoding=UnicodeBig, awt.toolkit=sun.lwawt.macosx.LWCToolkit, hibernate.connection.username=root, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, user.home=/Users/shc, java.specification.vendor=Oracle Corporation, hibernate.hbm2ddl.auto=update, java.library.path=/Users/shc/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor.url=http://java.oracle.com/, hibernate.connection.driver_class=com.mysql.jdbc.Driver, connection.username=root, java.vm.vendor=Oracle Corporation, gopherProxySet=false, hibernate.dialect=org.hibernate.dialect.MySQLDialect, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=com.shc.mifty.startup.Bootstrap, java.class.path=/Users/shc/Desktop/devspace/javaspace/mifty/target/classes:/Users/shc/Desktop/devspace/maven_repository/org/apache/thrift/libthrift/0.9.3/libthrift-0.9.3.jar:/Users/shc/Desktop/devspace/maven_repository/org/apache/httpcomponents/httpclient/4.4.1/httpclient-4.4.1.jar:/Users/shc/Desktop/devspace/maven_repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/shc/Desktop/devspace/maven_repository/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar:/Users/shc/Desktop/devspace/maven_repository/com/google/code/gson/gson/2.6.2/gson-2.6.2.jar:/Users/shc/Desktop/devspace/maven_repository/org/hibernate/hibernate-core/5.1.0.Final/hibernate-core-5.1.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/Users/shc/Desktop/devspace/maven_repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/shc/Desktop/devspace/maven_repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar:/Users/shc/Desktop/devspace/maven_repository/org/jboss/jandex/2.0.0.Final/jandex-2.0.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/com/fasterxml/classmate/1.3.0/classmate-1.3.0.jar:/Users/shc/Desktop/devspace/maven_repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/Users/shc/Desktop/devspace/maven_repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/Users/shc/Desktop/devspace/maven_repository/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final/hibernate-commons-annotations-5.0.1.Final.jar:/Users/shc/Desktop/devspace/maven_repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar:/Users/shc/Desktop/devspace/maven_repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/shc/Desktop/devspace/maven_repository/org/slf4j/slf4j-log4j12/1.7.21/slf4j-log4j12-1.7.21.jar:/Users/shc/Desktop/devspace/maven_repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/shc/Desktop/devspace/javaspace/crossing/target/classes:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/mina-core-2.0.2.jar:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/sharp-container-1.0.jar:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/log4j-repackaged.jar:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/sharp-container-example-1.0.jar:/Users/shc/Desktop/devspace/maven_repository/com/google/protobuf/protobuf-java/2.6.1/protobuf-java-2.6.1.jar:/Users/shc/Desktop/devspace/maven_repository/io/netty/netty-all/4.0.36.Final/netty-all-4.0.36.Final.jar:/Users/shc/Desktop/devspace/maven_repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/Users/shc/Desktop/devspace/maven_repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/shc/Desktop/devspace/maven_repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/shc/Desktop/devspace/maven_repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar, hibernate.bytecode.use_reflection_optimizer=false, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.7, sun.cpu.endian=little, sun.os.patch.level=unknown, connection.pool_size=2, java.io.tmpdir=/var/folders/p6/yc3hvzns3x7csz6jk52w10380000gn/T/, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, os.arch=x86_64, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, java.ext.dirs=/Users/shc/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, hibernate.connection.useUnicode=true, user.dir=/Users/shc/Desktop/devspace/javaspace/mifty, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, cache.provider_class=org.hibernate.cache.internal.NoCacheProvider, file.encoding=UTF-8, connection.characterEncoding=utf8, java.specification.version=1.7, hibernate.show_sql=true, hibernate.connection.pool_size=2}
+[host] 2016-05-18 09:48:39.434 [DEBUG] [pool-1-thread-1] Skipping JACC integration as it was not enabled
+[host] 2016-05-18 09:48:39.441 [DEBUG] [pool-1-thread-1] Instantiated session factory
+[host] 2016-05-18 09:48:39.471 [DEBUG] [pool-1-thread-1] Checking 0 named HQL queries
+[host] 2016-05-18 09:48:39.471 [DEBUG] [pool-1-thread-1] Checking 0 named SQL queries
+[host] 2016-05-18 09:48:39.473 [DEBUG] [pool-1-thread-1] Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@3e872ac6
+[host] 2016-05-18 09:48:39.475 [DEBUG] [pool-1-thread-1] Registering SessionFactory: 2f971857-65b9-4934-90ee-8d69e63fcbcd (<unnamed>)
+[host] 2016-05-18 09:48:39.476 [DEBUG] [pool-1-thread-1] Not binding SessionFactory to JNDI, no JNDI name configured
+[host] 2016-05-18 09:48:39.534 [DEBUG] [pool-1-thread-1] Statistics initialized [enabled=false]
+[host] 2016-05-18 09:48:39.601 [DEBUG] [pool-1-thread-1] begin
+[host] 2016-05-18 09:48:39.622 [DEBUG] [pool-1-thread-1] insert into test.user (uid,name) values (3,'zhouguoxing'); 
+[host] 2016-05-18 09:48:39.637 [DEBUG] [pool-1-thread-1] delete from test.user where uid=1; 
+[host] 2016-05-18 09:48:39.638 [DEBUG] [pool-1-thread-1] committing
+[host] 2016-05-18 09:48:39.639 [DEBUG] [pool-1-thread-1] Clearing local Synchronizations
+[host] 2016-05-18 09:48:39.642 [ERROR] [pool-1-thread-1] Error occurred during processing of message.
+org.hibernate.SessionException: Session was already closed
+	at org.hibernate.internal.SessionImpl.close(SessionImpl.java:414)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.hibernate.context.internal.ThreadLocalSessionContext$TransactionProtectionWrapper.invoke(ThreadLocalSessionContext.java:338)
+	at com.sun.proxy.$Proxy17.close(Unknown Source)
+	at com.shc.mifty.example.ExaServiceImpl.sayHello(ExaServiceImpl.java:73)
+	at com.shc.mifty.example.ExaService$Processor$sayHello.getResult(ExaService.java:245)
+	at com.shc.mifty.example.ExaService$Processor$sayHello.getResult(ExaService.java:1)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.thrift.TMultiplexedProcessor.process(TMultiplexedProcessor.java:123)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[host] 2016-05-18 09:49:09.021 [DEBUG] [pool-2-thread-1] Connection pool now considered primed; min-size will be maintained
+[host] 2016-05-18 09:49:11.979 [DEBUG] [main] Initializing ConfigWizard.
+[host] 2016-05-18 09:49:11.984 [DEBUG] [main] loading ServerConfig
+[host] 2016-05-18 09:49:12.021 [DEBUG] [main] FileName set to conf/server.properties
+[host] 2016-05-18 09:49:12.025 [DEBUG] [main] ConfigurationUtils.locate(): base is null, name is conf/server.properties
+[host] 2016-05-18 09:49:12.025 [DEBUG] [main] Could not locate file conf/server.properties at null: no protocol: conf/server.properties
+[host] 2016-05-18 09:49:12.031 [DEBUG] [main] Loading configuration from the path conf/server.properties
+[host] 2016-05-18 09:49:12.031 [DEBUG] [main] Base path set to file:///Users/shc/Desktop/devspace/javaspace/mifty/conf/server.properties
+[host] 2016-05-18 09:49:12.077 [INFO] [main] ServerConfig:
+server.bind_address           = 0.0.0.0
+server.decrypt.key            = miftyExampleKey
+server.port                   = 9090
+server.backlog                = 100
+server.encrypt.type           = DES
+server.sign.key               = miftyExampleKey
+server.sign.type              = MD5
+server.keystore               = /data/keystore
+server.ssl.enabled            = false
+server.ssl.port               = 9091
+server.encrypt.key            = miftyExampleKey
+
+[host] 2016-05-18 09:49:12.077 [DEBUG] [main] Initializing DaoWizard.
+[host] 2016-05-18 09:49:12.122 [INFO] [Thread-0] Starting Mifty server...
+[host] 2016-05-18 09:49:13.890 [DEBUG] [main] p: {"echo":"How are you!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:49:13.940 [DEBUG] [pool-1-thread-1] echo: {"sign":"E00192D3EF9539AD4C3A634064FEC575","params":{"echo":"How are you!","name":"Darren"}}
+[host] 2016-05-18 09:49:13.978 [DEBUG] [pool-1-thread-1] source: {"echo":"How are you!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:49:13.993 [INFO] [pool-1-thread-1] 
+name: Darren
+say: How are you!
+[host] 2016-05-18 09:49:13.993 [DEBUG] [pool-1-thread-1] source: {"sentence":"Hi, Darren ,How are you!"} signKey: miftyExampleKey
+[host] 2016-05-18 09:49:13.995 [DEBUG] [pool-1-thread-1] sayHello: {"sign":"23E7A98AFE424ADA0A8DC2D32AC71230","params":{"sentence":"Hi, Darren ,How are you!"},"errorCode":0,"errorInfo":"Success"}
+[host] 2016-05-18 09:49:13.999 [DEBUG] [main] p: {"hello":"Good morning!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:49:14.241 [DEBUG] [pool-1-thread-1] sayHello: {"encrypted":"ubUVRZ7gfuScyBl/cKNvZ4mU79L5s0fMPlLTwIrhAvbQhV81QuWz42JN6uzyqXrT87UF6DuzniEDzDWBQTj6BSHOJKF7i4SPv6Z6JPhgfHSrmg92+jHQajTACZbx06uq"}
+[host] 2016-05-18 09:49:14.457 [DEBUG] [pool-1-thread-1] source: {"hello":"Good morning!","name":"Darren"} signKey: miftyExampleKey
+[host] 2016-05-18 09:49:14.501 [DEBUG] [pool-1-thread-1] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[host] 2016-05-18 09:49:14.512 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[host] 2016-05-18 09:49:14.516 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[host] 2016-05-18 09:49:14.519 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[host] 2016-05-18 09:49:14.647 [INFO] [pool-1-thread-1] HHH000412: Hibernate Core {5.1.0.Final}
+[host] 2016-05-18 09:49:14.650 [INFO] [pool-1-thread-1] HHH000206: hibernate.properties not found
+[host] 2016-05-18 09:49:14.651 [INFO] [pool-1-thread-1] HHH000021: Bytecode provider name : javassist
+[host] 2016-05-18 09:49:14.684 [DEBUG] [pool-1-thread-1] Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD 3.0//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+[host] 2016-05-18 09:49:14.684 [DEBUG] [pool-1-thread-1] Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+[host] 2016-05-18 09:49:14.688 [DEBUG] [pool-1-thread-1] cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+[host] 2016-05-18 09:49:14.915 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[host] 2016-05-18 09:49:14.915 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[host] 2016-05-18 09:49:14.915 [DEBUG] [pool-1-thread-1] Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[host] 2016-05-18 09:49:14.938 [DEBUG] [pool-1-thread-1] Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[host] 2016-05-18 09:49:14.938 [DEBUG] [pool-1-thread-1] Building session factory using provided StandardServiceRegistry
+[host] 2016-05-18 09:49:14.956 [DEBUG] [pool-1-thread-1] Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[host] 2016-05-18 09:49:14.965 [INFO] [pool-1-thread-1] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[host] 2016-05-18 09:49:15.004 [DEBUG] [pool-1-thread-1] Adding type registration boolean -> org.hibernate.type.BooleanType@7561f05
+[host] 2016-05-18 09:49:15.004 [DEBUG] [pool-1-thread-1] Adding type registration boolean -> org.hibernate.type.BooleanType@7561f05
+[host] 2016-05-18 09:49:15.004 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@7561f05
+[host] 2016-05-18 09:49:15.006 [DEBUG] [pool-1-thread-1] Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@6e30f80e
+[host] 2016-05-18 09:49:15.008 [DEBUG] [pool-1-thread-1] Adding type registration true_false -> org.hibernate.type.TrueFalseType@6edd2f59
+[host] 2016-05-18 09:49:15.010 [DEBUG] [pool-1-thread-1] Adding type registration yes_no -> org.hibernate.type.YesNoType@58443af6
+[host] 2016-05-18 09:49:15.012 [DEBUG] [pool-1-thread-1] Adding type registration byte -> org.hibernate.type.ByteType@6f927f23
+[host] 2016-05-18 09:49:15.013 [DEBUG] [pool-1-thread-1] Adding type registration byte -> org.hibernate.type.ByteType@6f927f23
+[host] 2016-05-18 09:49:15.013 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@6f927f23
+[host] 2016-05-18 09:49:15.015 [DEBUG] [pool-1-thread-1] Adding type registration character -> org.hibernate.type.CharacterType@731e0de
+[host] 2016-05-18 09:49:15.015 [DEBUG] [pool-1-thread-1] Adding type registration char -> org.hibernate.type.CharacterType@731e0de
+[host] 2016-05-18 09:49:15.015 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@731e0de
+[host] 2016-05-18 09:49:15.018 [DEBUG] [pool-1-thread-1] Adding type registration short -> org.hibernate.type.ShortType@49a931a8
+[host] 2016-05-18 09:49:15.018 [DEBUG] [pool-1-thread-1] Adding type registration short -> org.hibernate.type.ShortType@49a931a8
+[host] 2016-05-18 09:49:15.018 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Short -> org.hibernate.type.ShortType@49a931a8
+[host] 2016-05-18 09:49:15.020 [DEBUG] [pool-1-thread-1] Adding type registration integer -> org.hibernate.type.IntegerType@3bc91eb3
+[host] 2016-05-18 09:49:15.021 [DEBUG] [pool-1-thread-1] Adding type registration int -> org.hibernate.type.IntegerType@3bc91eb3
+[host] 2016-05-18 09:49:15.021 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@3bc91eb3
+[host] 2016-05-18 09:49:15.023 [DEBUG] [pool-1-thread-1] Adding type registration long -> org.hibernate.type.LongType@2bc69070
+[host] 2016-05-18 09:49:15.024 [DEBUG] [pool-1-thread-1] Adding type registration long -> org.hibernate.type.LongType@2bc69070
+[host] 2016-05-18 09:49:15.024 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Long -> org.hibernate.type.LongType@2bc69070
+[host] 2016-05-18 09:49:15.026 [DEBUG] [pool-1-thread-1] Adding type registration float -> org.hibernate.type.FloatType@49819cf1
+[host] 2016-05-18 09:49:15.027 [DEBUG] [pool-1-thread-1] Adding type registration float -> org.hibernate.type.FloatType@49819cf1
+[host] 2016-05-18 09:49:15.027 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Float -> org.hibernate.type.FloatType@49819cf1
+[host] 2016-05-18 09:49:15.029 [DEBUG] [pool-1-thread-1] Adding type registration double -> org.hibernate.type.DoubleType@553beecf
+[host] 2016-05-18 09:49:15.029 [DEBUG] [pool-1-thread-1] Adding type registration double -> org.hibernate.type.DoubleType@553beecf
+[host] 2016-05-18 09:49:15.030 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@553beecf
+[host] 2016-05-18 09:49:15.032 [DEBUG] [pool-1-thread-1] Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@641c692b
+[host] 2016-05-18 09:49:15.032 [DEBUG] [pool-1-thread-1] Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@641c692b
+[host] 2016-05-18 09:49:15.034 [DEBUG] [pool-1-thread-1] Adding type registration big_integer -> org.hibernate.type.BigIntegerType@63b031ad
+[host] 2016-05-18 09:49:15.035 [DEBUG] [pool-1-thread-1] Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@63b031ad
+[host] 2016-05-18 09:49:15.037 [DEBUG] [pool-1-thread-1] Adding type registration string -> org.hibernate.type.StringType@74eef9db
+[host] 2016-05-18 09:49:15.037 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.String -> org.hibernate.type.StringType@74eef9db
+[host] 2016-05-18 09:49:15.039 [DEBUG] [pool-1-thread-1] Adding type registration nstring -> org.hibernate.type.StringNVarcharType@13fbf741
+[host] 2016-05-18 09:49:15.040 [DEBUG] [pool-1-thread-1] Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@21f83dec
+[host] 2016-05-18 09:49:15.042 [DEBUG] [pool-1-thread-1] Adding type registration url -> org.hibernate.type.UrlType@3dc7faaa
+[host] 2016-05-18 09:49:15.042 [DEBUG] [pool-1-thread-1] Adding type registration java.net.URL -> org.hibernate.type.UrlType@3dc7faaa
+[host] 2016-05-18 09:49:15.045 [DEBUG] [pool-1-thread-1] Adding type registration date -> org.hibernate.type.DateType@145733c2
+[host] 2016-05-18 09:49:15.045 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Date -> org.hibernate.type.DateType@145733c2
+[host] 2016-05-18 09:49:15.047 [DEBUG] [pool-1-thread-1] Adding type registration time -> org.hibernate.type.TimeType@51575d48
+[host] 2016-05-18 09:49:15.048 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Time -> org.hibernate.type.TimeType@51575d48
+[host] 2016-05-18 09:49:15.050 [DEBUG] [pool-1-thread-1] Adding type registration timestamp -> org.hibernate.type.TimestampType@744c2b5e
+[host] 2016-05-18 09:49:15.050 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@744c2b5e
+[host] 2016-05-18 09:49:15.051 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Date -> org.hibernate.type.TimestampType@744c2b5e
+[host] 2016-05-18 09:49:15.052 [DEBUG] [pool-1-thread-1] Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@2d3690b5
+[host] 2016-05-18 09:49:15.054 [DEBUG] [pool-1-thread-1] Adding type registration calendar -> org.hibernate.type.CalendarType@71031b7c
+[host] 2016-05-18 09:49:15.054 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@71031b7c
+[host] 2016-05-18 09:49:15.054 [DEBUG] [pool-1-thread-1] Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@71031b7c
+[host] 2016-05-18 09:49:15.055 [DEBUG] [pool-1-thread-1] Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@6a4d93ee
+[host] 2016-05-18 09:49:15.056 [DEBUG] [pool-1-thread-1] Adding type registration locale -> org.hibernate.type.LocaleType@1f54362f
+[host] 2016-05-18 09:49:15.057 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@1f54362f
+[host] 2016-05-18 09:49:15.058 [DEBUG] [pool-1-thread-1] Adding type registration currency -> org.hibernate.type.CurrencyType@5b4017cf
+[host] 2016-05-18 09:49:15.058 [DEBUG] [pool-1-thread-1] Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@5b4017cf
+[host] 2016-05-18 09:49:15.060 [DEBUG] [pool-1-thread-1] Adding type registration timezone -> org.hibernate.type.TimeZoneType@30b413de
+[host] 2016-05-18 09:49:15.060 [DEBUG] [pool-1-thread-1] Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@30b413de
+[host] 2016-05-18 09:49:15.061 [DEBUG] [pool-1-thread-1] Adding type registration class -> org.hibernate.type.ClassType@4ec88c68
+[host] 2016-05-18 09:49:15.062 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Class -> org.hibernate.type.ClassType@4ec88c68
+[host] 2016-05-18 09:49:15.063 [DEBUG] [pool-1-thread-1] Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@58174505
+[host] 2016-05-18 09:49:15.063 [DEBUG] [pool-1-thread-1] Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@58174505
+[host] 2016-05-18 09:49:15.064 [DEBUG] [pool-1-thread-1] Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@3728ecab
+[host] 2016-05-18 09:49:15.065 [DEBUG] [pool-1-thread-1] Adding type registration binary -> org.hibernate.type.BinaryType@2b06b791
+[host] 2016-05-18 09:49:15.066 [DEBUG] [pool-1-thread-1] Adding type registration byte[] -> org.hibernate.type.BinaryType@2b06b791
+[host] 2016-05-18 09:49:15.066 [DEBUG] [pool-1-thread-1] Adding type registration [B -> org.hibernate.type.BinaryType@2b06b791
+[host] 2016-05-18 09:49:15.067 [DEBUG] [pool-1-thread-1] Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@1050b5cc
+[host] 2016-05-18 09:49:15.067 [DEBUG] [pool-1-thread-1] Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@1050b5cc
+[host] 2016-05-18 09:49:15.068 [DEBUG] [pool-1-thread-1] Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@1050b5cc
+[host] 2016-05-18 09:49:15.069 [DEBUG] [pool-1-thread-1] Adding type registration image -> org.hibernate.type.ImageType@50dcf55
+[host] 2016-05-18 09:49:15.070 [DEBUG] [pool-1-thread-1] Adding type registration characters -> org.hibernate.type.CharArrayType@28d3e49a
+[host] 2016-05-18 09:49:15.070 [DEBUG] [pool-1-thread-1] Adding type registration char[] -> org.hibernate.type.CharArrayType@28d3e49a
+[host] 2016-05-18 09:49:15.071 [DEBUG] [pool-1-thread-1] Adding type registration [C -> org.hibernate.type.CharArrayType@28d3e49a
+[host] 2016-05-18 09:49:15.072 [DEBUG] [pool-1-thread-1] Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@118eb4a8
+[host] 2016-05-18 09:49:15.072 [DEBUG] [pool-1-thread-1] Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@118eb4a8
+[host] 2016-05-18 09:49:15.072 [DEBUG] [pool-1-thread-1] Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@118eb4a8
+[host] 2016-05-18 09:49:15.073 [DEBUG] [pool-1-thread-1] Adding type registration text -> org.hibernate.type.TextType@66c821ea
+[host] 2016-05-18 09:49:15.074 [DEBUG] [pool-1-thread-1] Adding type registration ntext -> org.hibernate.type.NTextType@6ab39ec9
+[host] 2016-05-18 09:49:15.079 [DEBUG] [pool-1-thread-1] Adding type registration blob -> org.hibernate.type.BlobType@7a4004bd
+[host] 2016-05-18 09:49:15.079 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@7a4004bd
+[host] 2016-05-18 09:49:15.080 [DEBUG] [pool-1-thread-1] Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@35340144
+[host] 2016-05-18 09:49:15.084 [DEBUG] [pool-1-thread-1] Adding type registration clob -> org.hibernate.type.ClobType@5aaf85a3
+[host] 2016-05-18 09:49:15.084 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@5aaf85a3
+[host] 2016-05-18 09:49:15.088 [DEBUG] [pool-1-thread-1] Adding type registration nclob -> org.hibernate.type.NClobType@6f64d9c1
+[host] 2016-05-18 09:49:15.088 [DEBUG] [pool-1-thread-1] Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@6f64d9c1
+[host] 2016-05-18 09:49:15.088 [DEBUG] [pool-1-thread-1] Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@562962ff
+[host] 2016-05-18 09:49:15.089 [DEBUG] [pool-1-thread-1] Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@337f0274
+[host] 2016-05-18 09:49:15.091 [DEBUG] [pool-1-thread-1] Adding type registration serializable -> org.hibernate.type.SerializableType@5b21eabe
+[host] 2016-05-18 09:49:15.094 [DEBUG] [pool-1-thread-1] Adding type registration object -> org.hibernate.type.ObjectType@6ec3f751
+[host] 2016-05-18 09:49:15.094 [DEBUG] [pool-1-thread-1] Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@6ec3f751
+[host] 2016-05-18 09:49:15.095 [DEBUG] [pool-1-thread-1] Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@5f3ac618
+[host] 2016-05-18 09:49:15.095 [DEBUG] [pool-1-thread-1] Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@ba38280
+[host] 2016-05-18 09:49:15.095 [DEBUG] [pool-1-thread-1] Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@1bcca778
+[host] 2016-05-18 09:49:15.096 [DEBUG] [pool-1-thread-1] Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@1906c58a
+[host] 2016-05-18 09:49:15.096 [DEBUG] [pool-1-thread-1] Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@b92f3dc
+[host] 2016-05-18 09:49:15.096 [DEBUG] [pool-1-thread-1] Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@5cc7f673
+[host] 2016-05-18 09:49:15.096 [DEBUG] [pool-1-thread-1] Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@4c05279b
+[host] 2016-05-18 09:49:15.097 [DEBUG] [pool-1-thread-1] Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@666b581a
+[host] 2016-05-18 09:49:15.109 [WARN] [pool-1-thread-1] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[host] 2016-05-18 09:49:15.116 [INFO] [pool-1-thread-1] HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+[host] 2016-05-18 09:49:15.117 [INFO] [pool-1-thread-1] HHH10001001: Connection properties: {useUnicode=true, user=root, password=123456, characterEncoding=utf8, useSSL=false}
+[host] 2016-05-18 09:49:15.117 [INFO] [pool-1-thread-1] HHH10001003: Autocommit mode: false
+[host] 2016-05-18 09:49:15.120 [DEBUG] [pool-1-thread-1] Initializing Connection pool with 1 Connections
+[host] 2016-05-18 09:49:15.120 [INFO] [pool-1-thread-1] HHH000115: Hibernate connection pool size: 2 (min=1)
+[host] 2016-05-18 09:49:15.443 [DEBUG] [pool-1-thread-1] Database ->
+       name : MySQL
+    version : 5.7.11
+      major : 5
+      minor : 7
+[host] 2016-05-18 09:49:15.443 [DEBUG] [pool-1-thread-1] Driver ->
+       name : MySQL Connector Java
+    version : mysql-connector-java-5.1.38 ( Revision: fe541c166cec739c74cc727c5da96c1028b4834a )
+      major : 5
+      minor : 1
+[host] 2016-05-18 09:49:15.443 [DEBUG] [pool-1-thread-1] JDBC version : 4.0
+[host] 2016-05-18 09:49:15.476 [INFO] [pool-1-thread-1] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[host] 2016-05-18 09:49:15.552 [DEBUG] [pool-1-thread-1] JDBC driver metadata reported database stores quoted identifiers in more than one case
+[host] 2016-05-18 09:49:15.563 [DEBUG] [pool-1-thread-1] IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+[host] 2016-05-18 09:49:15.650 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[host] 2016-05-18 09:49:15.651 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[host] 2016-05-18 09:49:15.653 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[host] 2016-05-18 09:49:15.653 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[host] 2016-05-18 09:49:15.654 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[host] 2016-05-18 09:49:15.656 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[host] 2016-05-18 09:49:15.657 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[host] 2016-05-18 09:49:15.660 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[host] 2016-05-18 09:49:15.662 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[host] 2016-05-18 09:49:15.663 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[host] 2016-05-18 09:49:15.663 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[host] 2016-05-18 09:49:15.671 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[host] 2016-05-18 09:49:15.672 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[host] 2016-05-18 09:49:15.673 [DEBUG] [pool-1-thread-1] Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[host] 2016-05-18 09:49:15.709 [DEBUG] [pool-1-thread-1] Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[host] 2016-05-18 09:49:15.755 [DEBUG] [pool-1-thread-1] Building session factory
+[host] 2016-05-18 09:49:15.756 [DEBUG] [pool-1-thread-1] SessionFactory name : null
+[host] 2016-05-18 09:49:15.757 [DEBUG] [pool-1-thread-1] Automatic flush during beforeCompletion(): disabled
+[host] 2016-05-18 09:49:15.757 [DEBUG] [pool-1-thread-1] Automatic session close at end of transaction: disabled
+[host] 2016-05-18 09:49:15.757 [DEBUG] [pool-1-thread-1] Statistics: disabled
+[host] 2016-05-18 09:49:15.758 [DEBUG] [pool-1-thread-1] Deleted entity synthetic identifier rollback: disabled
+[host] 2016-05-18 09:49:15.758 [DEBUG] [pool-1-thread-1] Default entity-mode: pojo
+[host] 2016-05-18 09:49:15.758 [DEBUG] [pool-1-thread-1] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[host] 2016-05-18 09:49:15.758 [DEBUG] [pool-1-thread-1] Allow initialization of lazy state outside session : disabled
+[host] 2016-05-18 09:49:15.758 [DEBUG] [pool-1-thread-1] Using BatchFetchStyle : LEGACY
+[host] 2016-05-18 09:49:15.759 [DEBUG] [pool-1-thread-1] Default batch fetch size: -1
+[host] 2016-05-18 09:49:15.759 [DEBUG] [pool-1-thread-1] Maximum outer join fetch depth: 2
+[host] 2016-05-18 09:49:15.759 [DEBUG] [pool-1-thread-1] Default null ordering: NONE
+[host] 2016-05-18 09:49:15.760 [DEBUG] [pool-1-thread-1] Order SQL updates by primary key: disabled
+[host] 2016-05-18 09:49:15.760 [DEBUG] [pool-1-thread-1] Order SQL inserts for batching: disabled
+[host] 2016-05-18 09:49:15.760 [DEBUG] [pool-1-thread-1] multi-tenancy strategy : NONE
+[host] 2016-05-18 09:49:15.760 [DEBUG] [pool-1-thread-1] JTA Track by Thread: enabled
+[host] 2016-05-18 09:49:15.760 [DEBUG] [pool-1-thread-1] Query language substitutions: {}
+[host] 2016-05-18 09:49:15.761 [DEBUG] [pool-1-thread-1] JPA query language strict compliance: disabled
+[host] 2016-05-18 09:49:15.761 [DEBUG] [pool-1-thread-1] Named query checking : enabled
+[host] 2016-05-18 09:49:15.761 [DEBUG] [pool-1-thread-1] Second-level cache: enabled
+[host] 2016-05-18 09:49:15.761 [DEBUG] [pool-1-thread-1] Second-level query cache: disabled
+[host] 2016-05-18 09:49:15.762 [DEBUG] [pool-1-thread-1] Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@48670f1f
+[host] 2016-05-18 09:49:15.762 [DEBUG] [pool-1-thread-1] Second-level cache region prefix: null
+[host] 2016-05-18 09:49:15.762 [DEBUG] [pool-1-thread-1] Optimize second-level cache for minimal puts: disabled
+[host] 2016-05-18 09:49:15.763 [DEBUG] [pool-1-thread-1] Structured second-level cache entries: disabled
+[host] 2016-05-18 09:49:15.763 [DEBUG] [pool-1-thread-1] Second-level cache direct-reference entries: disabled
+[host] 2016-05-18 09:49:15.763 [DEBUG] [pool-1-thread-1] Automatic eviction of collection cache: disabled
+[host] 2016-05-18 09:49:15.764 [DEBUG] [pool-1-thread-1] JDBC batch size: 15
+[host] 2016-05-18 09:49:15.764 [DEBUG] [pool-1-thread-1] JDBC batch updates for versioned data: enabled
+[host] 2016-05-18 09:49:15.764 [DEBUG] [pool-1-thread-1] Scrollable result sets: enabled
+[host] 2016-05-18 09:49:15.765 [DEBUG] [pool-1-thread-1] Wrap result sets: disabled
+[host] 2016-05-18 09:49:15.765 [DEBUG] [pool-1-thread-1] JDBC3 getGeneratedKeys(): enabled
+[host] 2016-05-18 09:49:15.765 [DEBUG] [pool-1-thread-1] JDBC result set fetch size: null
+[host] 2016-05-18 09:49:15.766 [DEBUG] [pool-1-thread-1] Connection release mode: ON_CLOSE
+[host] 2016-05-18 09:49:15.767 [DEBUG] [pool-1-thread-1] Generate SQL with comments: disabled
+[host] 2016-05-18 09:49:15.815 [DEBUG] [pool-1-thread-1] Session factory constructed with filter configurations : {}
+[host] 2016-05-18 09:49:15.816 [DEBUG] [pool-1-thread-1] Instantiating session factory with properties: {java.vendor=Oracle Corporation, show_sql=true, sun.java.launcher=SUN_STANDARD, hibernate.connection.url=jdbc:mysql://localhost:3306/test, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, hibernate.connection.characterEncoding=utf8, os.name=Mac OS X, hbm2ddl.auto=update, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/classes, hibernate.current_session_context_class=thread, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.7.0_80-b15, hibernate.cache.provider_class=org.hibernate.cache.internal.NoCacheProvider, user.name=shc, connection.driver_class=com.mysql.jdbc.Driver, hibernate.connection.useSSL=false, current_session_context_class=thread, user.language=zh, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib, dialect=org.hibernate.dialect.MySQLDialect, java.version=1.7.0_80, user.timezone=Asia/Shanghai, sun.arch.data.model=64, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, java.specification.name=Java Platform API Specification, file.separator=/, java.class.version=51.0, user.country=CN, connection.url=jdbc:mysql://localhost:3306/test, java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre, java.vm.info=mixed mode, os.version=10.11.4, connection.useSSL=false, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@4675763f, connection.useUnicode=true, path.separator=:, connection.password=123456, java.vm.version=24.80-b11, hibernate.connection.password=123456, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, sun.io.unicode.encoding=UnicodeBig, awt.toolkit=sun.lwawt.macosx.LWCToolkit, hibernate.connection.username=root, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, user.home=/Users/shc, java.specification.vendor=Oracle Corporation, hibernate.hbm2ddl.auto=update, java.library.path=/Users/shc/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor.url=http://java.oracle.com/, hibernate.connection.driver_class=com.mysql.jdbc.Driver, connection.username=root, java.vm.vendor=Oracle Corporation, gopherProxySet=false, hibernate.dialect=org.hibernate.dialect.MySQLDialect, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=com.shc.mifty.startup.Bootstrap, java.class.path=/Users/shc/Desktop/devspace/javaspace/mifty/target/classes:/Users/shc/Desktop/devspace/maven_repository/org/apache/thrift/libthrift/0.9.3/libthrift-0.9.3.jar:/Users/shc/Desktop/devspace/maven_repository/org/apache/httpcomponents/httpclient/4.4.1/httpclient-4.4.1.jar:/Users/shc/Desktop/devspace/maven_repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/shc/Desktop/devspace/maven_repository/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar:/Users/shc/Desktop/devspace/maven_repository/com/google/code/gson/gson/2.6.2/gson-2.6.2.jar:/Users/shc/Desktop/devspace/maven_repository/org/hibernate/hibernate-core/5.1.0.Final/hibernate-core-5.1.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/Users/shc/Desktop/devspace/maven_repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/shc/Desktop/devspace/maven_repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar:/Users/shc/Desktop/devspace/maven_repository/org/jboss/jandex/2.0.0.Final/jandex-2.0.0.Final.jar:/Users/shc/Desktop/devspace/maven_repository/com/fasterxml/classmate/1.3.0/classmate-1.3.0.jar:/Users/shc/Desktop/devspace/maven_repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/Users/shc/Desktop/devspace/maven_repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/Users/shc/Desktop/devspace/maven_repository/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final/hibernate-commons-annotations-5.0.1.Final.jar:/Users/shc/Desktop/devspace/maven_repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar:/Users/shc/Desktop/devspace/maven_repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/shc/Desktop/devspace/maven_repository/org/slf4j/slf4j-log4j12/1.7.21/slf4j-log4j12-1.7.21.jar:/Users/shc/Desktop/devspace/maven_repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/shc/Desktop/devspace/javaspace/crossing/target/classes:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/mina-core-2.0.2.jar:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/sharp-container-1.0.jar:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/log4j-repackaged.jar:/Users/shc/Desktop/devspace/javaspace/crossing/lib/newsharp/sharp-container-example-1.0.jar:/Users/shc/Desktop/devspace/maven_repository/com/google/protobuf/protobuf-java/2.6.1/protobuf-java-2.6.1.jar:/Users/shc/Desktop/devspace/maven_repository/io/netty/netty-all/4.0.36.Final/netty-all-4.0.36.Final.jar:/Users/shc/Desktop/devspace/maven_repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/Users/shc/Desktop/devspace/maven_repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/shc/Desktop/devspace/maven_repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/shc/Desktop/devspace/maven_repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar, hibernate.bytecode.use_reflection_optimizer=false, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.7, sun.cpu.endian=little, sun.os.patch.level=unknown, connection.pool_size=2, java.io.tmpdir=/var/folders/p6/yc3hvzns3x7csz6jk52w10380000gn/T/, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, os.arch=x86_64, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, java.ext.dirs=/Users/shc/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, hibernate.connection.useUnicode=true, user.dir=/Users/shc/Desktop/devspace/javaspace/mifty, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, cache.provider_class=org.hibernate.cache.internal.NoCacheProvider, file.encoding=UTF-8, connection.characterEncoding=utf8, java.specification.version=1.7, hibernate.show_sql=true, hibernate.connection.pool_size=2}
+[host] 2016-05-18 09:49:15.826 [DEBUG] [pool-1-thread-1] Skipping JACC integration as it was not enabled
+[host] 2016-05-18 09:49:15.831 [DEBUG] [pool-1-thread-1] Instantiated session factory
+[host] 2016-05-18 09:49:15.854 [DEBUG] [pool-1-thread-1] Checking 0 named HQL queries
+[host] 2016-05-18 09:49:15.854 [DEBUG] [pool-1-thread-1] Checking 0 named SQL queries
+[host] 2016-05-18 09:49:15.856 [DEBUG] [pool-1-thread-1] Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@39dd2367
+[host] 2016-05-18 09:49:15.858 [DEBUG] [pool-1-thread-1] Registering SessionFactory: 246ccdeb-2b06-4eea-8b29-88518bb89847 (<unnamed>)
+[host] 2016-05-18 09:49:15.859 [DEBUG] [pool-1-thread-1] Not binding SessionFactory to JNDI, no JNDI name configured
+[host] 2016-05-18 09:49:15.914 [DEBUG] [pool-1-thread-1] Statistics initialized [enabled=false]
+[host] 2016-05-18 09:49:15.919 [DEBUG] [pool-1-thread-1] begin
+[host] 2016-05-18 09:49:15.943 [DEBUG] [pool-1-thread-1] insert into test.user (uid,name) values (3,'zhouguoxing'); 
+[host] 2016-05-18 09:49:15.958 [DEBUG] [pool-1-thread-1] delete from test.user where uid=1; 
+[host] 2016-05-18 09:49:15.959 [DEBUG] [pool-1-thread-1] committing
+[host] 2016-05-18 09:49:15.962 [INFO] [pool-1-thread-1] 
+name: Darren
+say: Good morning!
+[host] 2016-05-18 09:49:15.962 [DEBUG] [pool-1-thread-1] source: {"sentence":"Hi, Darren ,Good morning!"} signKey: miftyExampleKey
+[host] 2016-05-18 09:49:15.963 [DEBUG] [pool-1-thread-1] sayHello: {"encrypted":"ubUVRZ7gfuRI6GxgNpVEw1nnmwy+J9bbuis4kCz+XvQ/VjGKv3wcxNoiSahhy0dw/Net8Oc5aaE0VFQZDkZ+1cfp7ZuKpo1PauVSt7tVmInUH1EwxOoLKPKRArKRUr/l","errorCode":0,"errorInfo":"Success"}
+[host] 2016-05-18 09:49:45.445 [DEBUG] [pool-2-thread-1] Connection pool now considered primed; min-size will be maintained
