@@ -4,7 +4,7 @@
 
   <groupId>club.jmint.</groupId>
   <artifactId>mifty</artifactId>
-  <version>0.1.0</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <name>mifty</name>
@@ -61,7 +61,7 @@
 	<dependency>
 		<groupId>club.jmint</groupId>
 		<artifactId>crossing</artifactId>
-		<version>0.1.0</version>
+		<version>1.0.0</version>
 	</dependency>
 	
   </dependencies>
