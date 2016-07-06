@@ -24,11 +24,10 @@ import com.google.gson.JsonObject;
 import club.jmint.mifty.config.ConfigWizard;
 import club.jmint.mifty.config.ServerConfig;
 import club.jmint.mifty.dao.Dao;
-import club.jmint.mifty.log.MyLog;
 import club.jmint.mifty.runtime.Constants;
 import club.jmint.mifty.service.gen.DemoService.Iface;
-
-import club.jmint.crossing.exception.CrossException;
+import club.jmint.mifty.utils.CrossLog;
+import club.jmint.crossing.specs.CrossException;
 import club.jmint.crossing.specs.CrossingService;
 
 public class DemoServiceImpl extends CrossingService implements Iface {
@@ -46,7 +45,7 @@ public class DemoServiceImpl extends CrossingService implements Iface {
 	 */
 	public String demoSay(String params, boolean isEncrypt) throws TException {
 		//parse parameters and verify signature
-		MyLog.logger.debug("echo: " + params);
+		CrossLog.logger.debug("echo: " + params);
 		JsonObject ip;
 		try{
 			ip = parseInputParams(params, isEncrypt);
@@ -69,7 +68,7 @@ public class DemoServiceImpl extends CrossingService implements Iface {
 		//do your business logics
 		System.out.println("name: " + name);
 		System.out.println("echo: " + echo);
-		MyLog.logger.info("\nname: " + name + "\nsay: " + echo);
+		CrossLog.logger.info("\nname: " + name + "\nsay: " + echo);
 
 		String sentence = "Hi, " + name + " ," + echo;
 		//do more things here.
@@ -84,7 +83,7 @@ public class DemoServiceImpl extends CrossingService implements Iface {
 		}catch(CrossException ce){
 			return buildOutputByCrossException(ce);
 		}
-		MyLog.logger.debug("sayHello: " + output);
+		CrossLog.logger.debug("sayHello: " + output);
 		return output;
 	}
 

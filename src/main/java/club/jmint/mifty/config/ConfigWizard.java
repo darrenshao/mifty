@@ -22,8 +22,8 @@ import java.util.Map.Entry;
 
 import org.apache.commons.configuration.*;
 
-import club.jmint.mifty.log.MyLog;
 import club.jmint.mifty.runtime.Constants;
+import club.jmint.mifty.utils.CrossLog;
 import club.jmint.mifty.wizard.Wizard;
 
 /**
@@ -47,7 +47,7 @@ public class ConfigWizard extends Wizard {
 		try {
 			config = new PropertiesConfiguration(file);
 		} catch (ConfigurationException e) {
-			MyLog.printStackTrace(e);
+			CrossLog.printStackTrace(e);
 		}
 		
 		return config;
@@ -58,7 +58,7 @@ public class ConfigWizard extends Wizard {
 		try {
 			config = new XMLConfiguration(file);
 		} catch (ConfigurationException e){
-			MyLog.printStackTrace(e);
+			CrossLog.printStackTrace(e);
 		}
 		
 		return config;
@@ -84,7 +84,6 @@ public class ConfigWizard extends Wizard {
 			confMap = new HashMap<String, Config>();
 		}
 		confMap.put(Constants.CONFIG_SERVER, new ServerConfig("conf/server.properties"));
-		confMap.put(Constants.CONFIG_CROSSING, new ClientCallConfig("conf/crossing_clientcall.xml"));
 		loadConfig();
 	}
 

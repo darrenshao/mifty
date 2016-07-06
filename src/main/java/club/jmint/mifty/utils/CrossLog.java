@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package club.jmint.mifty.log;
+package club.jmint.mifty.utils;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.slf4j.Logger;
@@ -28,12 +28,12 @@ import java.io.StringWriter;
  * @author shc
  *
  */
-public class MyLog {
+public class CrossLog {
 	static {
 		PropertyConfigurator.configure("conf/log4j.properties"); 
 	}
 	
-	public final static Logger logger = LoggerFactory.getLogger(MyLog.class);
+	public final static Logger logger = LoggerFactory.getLogger(CrossLog.class);
 	
 	public final static StringWriter sw = new StringWriter();
 	public final static  PrintWriter pw = new PrintWriter(sw);

@@ -21,12 +21,12 @@ import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 
 import com.google.gson.JsonObject;
+
+import club.jmint.crossing.specs.CrossException;
 import club.jmint.mifty.dao.Dao;
 import club.jmint.mifty.example.gen.ExaService.Iface;
-import club.jmint.mifty.log.MyLog;
 import club.jmint.mifty.service.MiftyService;
-
-import club.jmint.crossing.exception.CrossException;
+import club.jmint.mifty.utils.CrossLog;
 
 public class ExaServiceImpl extends MiftyService implements Iface {
 
@@ -35,7 +35,7 @@ public class ExaServiceImpl extends MiftyService implements Iface {
 	 */
 	public String sayHello(String params, boolean isEncrypt) throws TException {
 		//parse parameters and verify signature
-		MyLog.logger.debug("sayHello: " + params);
+		CrossLog.logger.debug("sayHello: " + params);
 		JsonObject ip;
 		try{
 			ip = parseInputParams(params, isEncrypt);
@@ -65,7 +65,7 @@ public class ExaServiceImpl extends MiftyService implements Iface {
 		//do your business logics
 		System.out.println("name: " + name);
 		System.out.println("hello: " + hello);
-		MyLog.logger.info("\nname: " + name + "\nsay: " + hello);
+		CrossLog.logger.info("\nname: " + name + "\nsay: " + hello);
 
 		String sentence = "Hi, " + name + " ," + hello;
 		//do more things here.
@@ -80,7 +80,7 @@ public class ExaServiceImpl extends MiftyService implements Iface {
 		}catch(CrossException ce){
 			return buildOutputByCrossException(ce);
 		}
-		MyLog.logger.debug("sayHello: " + output);
+		CrossLog.logger.debug("sayHello: " + output);
 		return output;
 	}
 
@@ -89,7 +89,7 @@ public class ExaServiceImpl extends MiftyService implements Iface {
 	 */
 	public String echo(String params, boolean isEncrypt) throws TException {
 		//parse parameters and verify signature
-		MyLog.logger.debug("echo: " + params);
+		CrossLog.logger.debug("echo: " + params);
 		JsonObject ip;
 		try{
 			ip = parseInputParams(params, isEncrypt);
@@ -112,7 +112,7 @@ public class ExaServiceImpl extends MiftyService implements Iface {
 		//do your business logics
 		System.out.println("name: " + name);
 		System.out.println("echo: " + echo);
-		MyLog.logger.info("\nname: " + name + "\nsay: " + echo);
+		CrossLog.logger.info("\nname: " + name + "\nsay: " + echo);
 
 		String sentence = "Hi, " + name + " ," + echo;
 		//do more things here.
@@ -127,7 +127,7 @@ public class ExaServiceImpl extends MiftyService implements Iface {
 		}catch(CrossException ce){
 			return buildOutputByCrossException(ce);
 		}
-		MyLog.logger.debug("sayHello: " + output);
+		CrossLog.logger.debug("sayHello: " + output);
 		return output;
 	}
 
