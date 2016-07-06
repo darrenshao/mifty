@@ -39,10 +39,10 @@ import club.jmint.mifty.config.ConfigWizard;
 import club.jmint.mifty.config.ServerConfig;
 import club.jmint.mifty.example.ExaServiceImpl;
 import club.jmint.mifty.example.gen.ExaService;
-import club.jmint.mifty.log.MyLog;
 import club.jmint.mifty.runtime.Constants;
 import club.jmint.mifty.service.DemoServiceImpl;
 import club.jmint.mifty.service.gen.DemoService;
+import club.jmint.mifty.utils.CrossLog;
 import club.jmint.mifty.wizard.WizardManager;
 
 import org.apache.thrift.transport.TSSLTransportFactory.TSSLTransportParameters;
@@ -116,12 +116,12 @@ public class MiftyServer {
 			TServer server = new TThreadPoolServer(new TThreadPoolServer.Args(t).processor(p));
 			//TServer server = new TSimpleServer(new Args(serverTransport).processor(processor ));
 
-			MyLog.logger.info("Starting "+ name +" Server...");
+			CrossLog.logger.info("Starting "+ name +" Server...");
 			server.serve();
 		}catch(Exception e){
 			cleanup();
-			MyLog.logger.error(name + " server startup failed.");
-			MyLog.printStackTrace(e);
+			CrossLog.logger.error(name + " server startup failed.");
+			CrossLog.printStackTrace(e);
 		}
 	}
 
@@ -136,13 +136,13 @@ public class MiftyServer {
 			// Use this for a multi threaded server
 			TServer sslserver = new TThreadPoolServer(new TThreadPoolServer.Args(serverTransport).processor(p));
 
-			MyLog.logger.info("Starting " + name + " secure server...");
+			CrossLog.logger.info("Starting " + name + " secure server...");
 			sslserver.serve();
 
 		}catch(Exception e){
 			cleanup();
-			MyLog.logger.error(name + " server startup failed.");
-			MyLog.printStackTrace(e);
+			CrossLog.logger.error(name + " server startup failed.");
+			CrossLog.printStackTrace(e);
 		}
 	}
 

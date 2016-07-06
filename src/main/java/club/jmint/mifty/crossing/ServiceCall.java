@@ -16,17 +16,20 @@
 
 package club.jmint.mifty.crossing;
 
+import com.google.gson.JsonObject;
+
+import club.jmint.crossing.client.CallResult;
 import club.jmint.crossing.client.CrossingClient;
-import club.jmint.crossing.exception.CrossException;
+import club.jmint.crossing.specs.CrossException;
 
 public class ServiceCall {
 	public static final CrossingClient cc = CrossingClient.getInstance();
 	
-	public String invoke(String inf, String params) throws CrossException {
-		return cc.call(inf, params);
+	public CallResult invoke(String inf, JsonObject params) throws CrossException {
+		return cc.serviceCall(inf, params, false);
 	}
 	
-	public String invoke(String inf, String params, boolean isEncrypt) throws CrossException {
-		return cc.call(inf, params, isEncrypt);
+	public CallResult invoke(String inf, JsonObject params, boolean isEncrypt) throws CrossException {
+		return cc.serviceCall(inf, params, isEncrypt);
 	}
 }

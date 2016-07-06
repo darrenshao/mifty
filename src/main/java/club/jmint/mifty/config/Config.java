@@ -20,7 +20,7 @@ import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
 import org.apache.commons.configuration.XMLConfiguration;
 
-import club.jmint.mifty.log.MyLog;
+import club.jmint.mifty.utils.CrossLog;
 
 
 public class Config implements IConfig{
@@ -41,7 +41,7 @@ public class Config implements IConfig{
 			config = new PropertiesConfiguration(file);
 			//System.out.println(config);
 		} catch (ConfigurationException e) {
-			MyLog.printStackTrace(e);
+			CrossLog.printStackTrace(e);
 		}
 		
 		return config;
@@ -53,14 +53,14 @@ public class Config implements IConfig{
 			//String fileName = Constants.DIR_CONF+File.separator+file;
 			config = new XMLConfiguration(file);
 		} catch (ConfigurationException e){
-			MyLog.printStackTrace(e);
+			CrossLog.printStackTrace(e);
 		}
 		
 		return config;
 	}
 
 	public Config loadConfig() {
-		MyLog.logger.debug("loading " + name);
+		CrossLog.logger.debug("loading " + name);
 		return null;
 	}
 

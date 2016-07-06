@@ -22,7 +22,7 @@ import java.util.Map.Entry;
 
 import org.apache.commons.configuration.PropertiesConfiguration;
 
-import club.jmint.mifty.log.MyLog;
+import club.jmint.mifty.utils.CrossLog;
 
 public class ServerConfig extends Config {
 	private HashMap<String, String> scMap;
@@ -65,7 +65,7 @@ public class ServerConfig extends Config {
 			en = it.next();
 			sb.append(String.format("%-30s= %s\n", en.getKey(), en.getValue()));
 		}
-		MyLog.logger.info(sb.toString());
+		CrossLog.logger.info(sb.toString());
 	}
 
 }

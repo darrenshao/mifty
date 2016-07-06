@@ -31,7 +31,7 @@ public class Constants {
 	
 	public final static String CONFIG_ACL = "config.acl";
 	public final static String CONFIG_SERVER = "config.server";
-	public final static String CONFIG_CROSSING = "config.crossing";
+	public final static String CONFIG_CROSSING_CLIENT = "config.crossing.client";
 	
 	public final static int SERVER_PORT = 9090;
 	public final static int SERVER_SSL_PORT = 9091;

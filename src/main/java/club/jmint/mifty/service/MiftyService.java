@@ -19,13 +19,9 @@ package club.jmint.mifty.service;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 import java.util.Map.Entry;
 
 import org.apache.thrift.TException;
-import org.hibernate.SQLQuery;
-import org.hibernate.Session;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -34,13 +30,11 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSyntaxException;
 import club.jmint.mifty.config.ConfigWizard;
 import club.jmint.mifty.config.ServerConfig;
-import club.jmint.mifty.dao.Dao;
 import club.jmint.mifty.dao.IDao;
-import club.jmint.mifty.log.MyLog;
 import club.jmint.mifty.runtime.Constants;
-
-import club.jmint.crossing.exception.CrossException;
-import club.jmint.crossing.runtime.ErrorCode;
+import club.jmint.mifty.utils.CrossLog;
+import club.jmint.crossing.specs.ErrorCode;
+import club.jmint.crossing.specs.CrossException;
 import club.jmint.crossing.specs.CrossingService;
 
 public class MiftyService extends CrossingService implements IDao  {
@@ -51,12 +45,12 @@ public class MiftyService extends CrossingService implements IDao  {
 		setEncryptType(config.getItem("server.encrypt.type"));
 		setEnKey(config.getItem("server.encrypt.key"));
 		setDeKey(config.getItem("server.decrypt.key"));
-		//System.out.println("MiftyService init.");
+		//CrossLog.logger.info("MiftyService init.");
 	}
 	
 	public String callProxy(String method, String params, boolean isEncrypt) throws TException {
 		//parse parameters and verify signature
-		MyLog.logger.debug("callProxy: " + method + "(in: " +params+")");
+		CrossLog.logger.debug("callProxy: " + method + "(in: " +params+")");
 		JsonObject ip;
 		try{
 			ip = parseInputParams(params, isEncrypt);
@@ -108,17 +102,17 @@ public class MiftyService extends CrossingService implements IDao  {
 		try{
 			Method m = this.getClass().getDeclaredMethod(method, ma[idx].getParameterTypes());
 			outputMap = (HashMap<String, String>) m.invoke(this, inputMap);
-			MyLog.logger.debug("callProxy: " + method + "() executed.");
+			CrossLog.logger.debug("callProxy: " + method + "() executed.");
 		}
 		catch(NoSuchMethodException nsm){
-			MyLog.logger.error("callProxy: " + method + "() not found.");
-			MyLog.printStackTrace(nsm);
+			CrossLog.logger.error("callProxy: " + method + "() not found.");
+			CrossLog.printStackTrace(nsm);
 			return buildOutputError(ErrorCode.CROSSING_ERR_INTERFACE_NOT_FOUND.getCode(), 
 						ErrorCode.CROSSING_ERR_INTERFACE_NOT_FOUND.getInfo());			
 		}
 		catch(Exception e){
-			MyLog.logger.error("callProxy: " + method + "() executed with exception.");
-			MyLog.printStackTrace(e);
+			CrossLog.logger.error("callProxy: " + method + "() executed with exception.");
+			CrossLog.printStackTrace(e);
 			if (e instanceof CrossException){
 				return buildOutputByCrossException((CrossException)e);
 			}
@@ -160,7 +154,7 @@ public class MiftyService extends CrossingService implements IDao  {
 		}catch(CrossException ce){
 			return buildOutputByCrossException(ce);
 		}
-		MyLog.logger.debug("callProxy: " + method + "(out: "+output+")");
+		CrossLog.logger.debug("callProxy: " + method + "(out: "+output+")");
 		return output;
 	}
 

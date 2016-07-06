@@ -10,7 +10,7 @@ import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 
 import club.jmint.mifty.dao.Dao;
-import club.jmint.mifty.log.MyLog;
+import club.jmint.mifty.utils.CrossLog;
 
 public class Sql {
 	private static final Sql sql = new Sql();
@@ -54,8 +54,8 @@ public class Sql {
 			session.getTransaction().commit();
 			
 		}catch(Exception e){
-			MyLog.logger.error("doInsert error.");
-			MyLog.printStackTrace(e);
+			CrossLog.logger.error("doInsert error.");
+			CrossLog.printStackTrace(e);
 		}
 		return returnObj;
 	}
@@ -71,8 +71,8 @@ public class Sql {
 			session.getTransaction().commit();
 			
 		}catch(Exception e){
-			MyLog.logger.error("doDelete error.");
-			MyLog.printStackTrace(e);
+			CrossLog.logger.error("doDelete error.");
+			CrossLog.printStackTrace(e);
 		}
 		return returnObj;		
 	}
@@ -88,8 +88,8 @@ public class Sql {
 			session.getTransaction().commit();
 			
 		}catch(Exception e){
-			MyLog.logger.error("doUpdate error.");
-			MyLog.printStackTrace(e);
+			CrossLog.logger.error("doUpdate error.");
+			CrossLog.printStackTrace(e);
 		}
 		return returnObj;		
 	}
@@ -105,8 +105,8 @@ public class Sql {
 			session.getTransaction().commit();
 			
 		}catch(Exception e){
-			MyLog.logger.error("doSelect error.");
-			MyLog.printStackTrace(e);
+			CrossLog.logger.error("doSelect error.");
+			CrossLog.printStackTrace(e);
 		}
 		return returnObj;		
 	}
@@ -131,11 +131,39 @@ public class Sql {
 		return doInsert(insertsql);
 	}
 	
+	/**
+	 * 
+	 * @param table	
+	 * @param map	fields/value1/value2/value3...
+	 * 				fields format: "f1,f2,f3,f4"
+	 * 				values format: "v1,v2,v3,v4"
+	 * @return effected rows
+	 */
+	//Multi-line Create
+	public int sqlMultiCreate(String table, String fields, String[] values) {	
+		String fs = fields + "create_time";
+		String vs;
+		String vslist = null;
+		
+		vs = values[0] + ",now()";
+		vslist += "(" + vs + ")";
+		for (int i=1;i<values.length;i++){
+			vs = values[i] + ",now()";
+			vslist += ",(" + vs + ")";
+		}
+
+		String insertsql = "insert into "+table+" ("+fs+") values " + vslist;
+		
+		return doInsert(insertsql);
+	}
+	
 	//Delete
 	public int sqlDelete(String table, String condition) {
 		
-		String sql = "delete from "+table+" where " + condition;
-		
+		String sql = "delete from "+table;
+		if (condition!=null && !condition.isEmpty()){
+			sql += " where " + condition;
+		}
 		return doDelete(sql);
 	}
 	
@@ -153,8 +181,10 @@ public class Sql {
 			updatesql.append(en.getKey() + "=" + formatField(en.getValue(),true)); 
 		}
 		updatesql.append("update_time=now()");
-		updatesql.append(" where " + condition);
-		MyLog.logger.debug("SQL: " + updatesql.toString());
+		if (condition!=null && !condition.isEmpty()){
+			updatesql.append(" where " + condition);
+		}
+		CrossLog.logger.debug("SQL: " + updatesql.toString());
 		
 		return doUpdate(updatesql.toString());
 	}
@@ -162,9 +192,28 @@ public class Sql {
 	//Select
 	public List<Object[]> sqlSelect(String table, String fields, String condition) {
 		
-		String sql = "select " + fields + " from " + table + " where " + condition;
+		String sql;
+		
+		if (condition==null || condition.isEmpty()){
+			sql = "select " + fields + " from " + table;
+		}
+		else {
+			sql = "select " + fields + " from " + table + " where " + condition;
+		}
 		
 		return doSelect(sql);
-	}	
+	}
+	
+	//Get last (auto increment)id
+	public int sqlLastInsertId(){
+		String sql = "select last_insert_id();";
+		List<Object[]> list = doSelect(sql);
+		if (!list.isEmpty()){
+			String id = list.get(0)[0].toString();
+			return Integer.parseInt(id);
+		} else {
+			return 0;
+		}
+	}
 }
 

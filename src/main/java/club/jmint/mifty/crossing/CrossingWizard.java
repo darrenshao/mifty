@@ -17,15 +17,13 @@
 package club.jmint.mifty.crossing;
 
 import club.jmint.crossing.client.CrossingClient;
-import club.jmint.crossing.log.MyLog;
-import club.jmint.mifty.config.ClientCallConfig;
-import club.jmint.mifty.config.ConfigWizard;
-import club.jmint.mifty.runtime.Constants;
+import club.jmint.crossing.client.config.ClientConfig;
+import club.jmint.crossing.client.utils.CrossLog;
 import club.jmint.mifty.wizard.Wizard;
 
 public class CrossingWizard extends Wizard {
 	private final CrossingClient cc = CrossingClient.getInstance();
-	private ClientCallConfig ccc = null;
+	private ClientConfig config = null;
 
 	public CrossingWizard(String name) {
 		super(name);
@@ -42,33 +40,30 @@ public class CrossingWizard extends Wizard {
 
 	@Override
 	public void init() {
-		super.init();
-	   	ccc = (ClientCallConfig) ConfigWizard.getConfig(Constants.CONFIG_CROSSING);
-	   	cc.setClientCallInfo(ccc.getClientCallInfoMap());
-    	cc.addServerIp(ccc.getDefaultCrossingServerInfo().ip);
-    	cc.setPort(Integer.parseInt(ccc.getDefaultCrossingServerInfo().port));
-    	
-    	//Start Crossing Client
-    	try{
-    		cc.startup();
-    	}catch(Exception e){
-    		MyLog.logger.error("Connect to crossing server failed.");
-    		MyLog.printStackTrace(e);
-    	}
-    	
-    	MyLog.logger.info("Connected to crossing server.");
+		super.init();    	
 	}
 
 	@Override
 	public void startup() {
-		// TODO Auto-generated method stub
 		super.startup();
+    	//Start Crossing Client
+    	try{
+    		cc.startup();
+    	}catch(Exception e){
+    		CrossLog.logger.error("Connect to crossing server failed.");
+    		CrossLog.printStackTrace(e);
+    	}
+    	
+    	CrossLog.logger.info("Connected to crossing server.");
+
 	}
 
 	@Override
 	public void shutdown() {
-		// TODO Auto-generated method stub
 		super.shutdown();
+		//Stop Crossing client
+		cc.shutdown();
+		CrossLog.logger.info("Disconnected to crossing server.");
 	}
 
 }

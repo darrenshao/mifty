@@ -29,8 +29,7 @@ import com.google.gson.JsonObject;
 
 import club.jmint.mifty.example.gen.ExaService;
 import club.jmint.mifty.service.gen.DemoService;
-
-import club.jmint.crossing.exception.CrossException;
+import club.jmint.crossing.specs.CrossException;
 import club.jmint.crossing.specs.ParamBuilder;
 
 import org.apache.thrift.transport.TSocket;

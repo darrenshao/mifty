@@ -26,7 +26,7 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
-import club.jmint.mifty.log.MyLog;
+import club.jmint.mifty.utils.CrossLog;
 
 public class Dao {
 	//Database field types
@@ -50,11 +50,11 @@ public class Dao {
 			StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()  
 					.applySettings(cfg.getProperties()).build(); 
 			SessionFactory sf = cfg.buildSessionFactory(serviceRegistry); 
-			MyLog.logger.info("DAO SessionFactory initialized.");
+			CrossLog.logger.info("DAO SessionFactory initialized.");
 			return sf;
 		}
 		catch (Throwable ex) {
-			MyLog.logger.error("DAO SessionFactory initialization failed.");
+			CrossLog.logger.error("DAO SessionFactory initialization failed.");
 			throw new ExceptionInInitializerError(ex);
 		}
 	}

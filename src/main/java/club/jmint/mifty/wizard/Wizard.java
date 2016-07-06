@@ -16,7 +16,7 @@
 
 package club.jmint.mifty.wizard;
 
-import club.jmint.crossing.log.MyLog;
+import club.jmint.mifty.utils.CrossLog;
 
 /**
  * @author shc
@@ -34,17 +34,13 @@ public class Wizard implements IWizard {
 	}
 
 	public void init() {
-		MyLog.logger.debug("Initializing " + name + ".");
+		CrossLog.logger.debug("Initializing " + name + ".");
 	}
 
 	public void startup() {
-		// TODO Auto-generated method stub
-		
 	}
 
 	public void shutdown() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
